@@ -18,7 +18,7 @@ across 18+ Indian states. It helps schools digitize admissions, fee collection, 
 exams, timetables, and parent communication — all in one platform.
 
 **Starting price:** ₹999/month  
-**Demo:** https://veerexa.com/demo  
+**Demo:** https://school.veerexa.com  
 
 ## Blog Posts (Structured for AI Indexing)
 
@@ -64,4 +64,4 @@ Keywords: school digitization India, school management software Delhi, school ER
 
 Website: https://veerexa.com  
 Email: info@veerexa.com  
-Demo: https://veerexa.com/demo  
+Demo: https://school.veerexa.com  
