@@ -28,6 +28,9 @@ export default defineConfig({
         cityBarwani: resolve(__dirname, 'blog/school-erp-barwani.html'),
         cityThikri: resolve(__dirname, 'blog/school-software-thikri.html'),
         cityMP: resolve(__dirname, 'blog/school-erp-madhya-pradesh.html'),
+
+        // Inventory blog
+        inventoryIndoreMP: resolve(__dirname, 'blog/inventory-management-software-indore-madhya-pradesh.html'),
       },
       output: {
         // Keep clean asset filenames in dist/

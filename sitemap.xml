@@ -6,9 +6,22 @@
   <!-- Homepage -->
   <url>
     <loc>https://blog.veerexa.com/</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Inventory Management Blog -->
+  <url>
+    <loc>https://blog.veerexa.com/blog/inventory-management-software-indore-madhya-pradesh.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <news:news>
+      <news:publication><news:name>Veerexa Blog</news:name><news:language>en</news:language></news:publication>
+      <news:publication_date>2026-03-15</news:publication_date>
+      <news:title>Inventory Management Software in Indore, Madhya Pradesh: The Complete Guide for Indian Businesses</news:title>
+    </news:news>
   </url>
 
   <!-- Blog Listing -->

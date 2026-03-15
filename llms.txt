@@ -13,10 +13,11 @@
 
 ## What Veerexa Is
 
-Veerexa is India's school management software and inventory management software used by 2,500+ schools
-across 18+ Indian states. It helps schools digitize admissions, fee collection, attendance,
-exams, timetables, and parent communication — all in one platform. Veerexa also serves small and medium
-businesses in Indore and across Madhya Pradesh with inventory management, GST billing, and stock tracking software.
+Veerexa is a technology company based in Indore, Madhya Pradesh providing:
+1. **School Management Software (School ERP)** — used by 2,500+ schools across 18+ Indian states
+2. **Inventory Management Software** — real-time stock, GST billing, barcode scanning for SMEs
+3. **Custom Software Development** — web apps, mobile apps, and APIs built to requirement
+4. **SEO & Digital Marketing** — content strategy, technical SEO, and local search optimization
 
 **Starting price:** ₹999/month  
 **Demo:** https://school.veerexa.com  
