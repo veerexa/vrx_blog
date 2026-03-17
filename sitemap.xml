@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.veerexa.com/index.html</loc>
+    <loc>https://blog.veerexa.com/</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Categories -->
-  <url><loc>https://blog.veerexa.com/education/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://blog.veerexa.com/education/career-lab/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blog.veerexa.com/education/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blog.veerexa.com/education/career-lab/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://blog.veerexa.com/education/career-lab/medical-careers-guide-india.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://blog.veerexa.com/education/career-lab/engineering-tech-career-roadmap.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://blog.veerexa.com/education/career-lab/science-research-isro-careers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://blog.veerexa.com/education/career-lab/commerce-finance-career-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://blog.veerexa.com/education/career-lab/law-government-service-careers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://blog.veerexa.com/education/career-lab/creative-design-content-careers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://blog.veerexa.com/space/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://blog.veerexa.com/tech/index.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://blog.veerexa.com/inventory/index.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/space/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blog.veerexa.com/tech/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/inventory/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Space Blogs -->
   <url><loc>https://blog.veerexa.com/space/chandrayaan-3-success.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
