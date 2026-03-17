@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.veerexa.com/</loc>
+    <loc>https://blog.veerexa.com/index.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Categories -->
-  <url><loc>https://blog.veerexa.com/education/</loc><priority>0.9</priority></url>
-  <url><loc>https://blog.veerexa.com/space/</loc><priority>0.9</priority></url>
-  <url><loc>https://blog.veerexa.com/tech/</loc><priority>0.8</priority></url>
-  <url><loc>https://blog.veerexa.com/inventory/</loc><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/education/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blog.veerexa.com/education/career-lab/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blog.veerexa.com/education/career-lab/medical-careers-guide-india.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/education/career-lab/engineering-tech-career-roadmap.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/education/career-lab/science-research-isro-careers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/education/career-lab/commerce-finance-career-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/education/career-lab/law-government-service-careers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/education/career-lab/creative-design-content-careers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/space/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blog.veerexa.com/tech/index.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/inventory/index.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Space Blogs -->
-  <url><loc>https://blog.veerexa.com/space/chandrayaan-3-success.html</loc><priority>0.8</priority></url>
-  <url><loc>https://blog.veerexa.com/space/gaganyaan-mission-updates.html</loc><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/space/chandrayaan-3-success.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/space/gaganyaan-mission-updates.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/space/isro-launches-2026-schedule.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blog.veerexa.com/space/india-vs-nasa-space-missions.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Education Blogs -->
-  <url><loc>https://blog.veerexa.com/education/best-school-management-software-india.html</loc><priority>0.7</priority></url>
-  <url><loc>https://blog.veerexa.com/education/how-school-erp-software-helps-schools.html</loc><priority>0.7</priority></url>
-  <url><loc>https://blog.veerexa.com/education/school-erp-indore.html</loc><priority>0.7</priority></url>
-  <url><loc>https://blog.veerexa.com/education/school-erp-madhya-pradesh.html</loc><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/best-school-management-software-india.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/how-school-erp-software-helps-schools.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/school-erp-indore.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/school-erp-madhya-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/features-of-good-school-management-system.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/benefits-of-school-management-software.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/school-management-software-bhopal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/school-erp-barwani.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/school-software-thikri.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/how-schools-can-digitize-administration.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/education/veerexa-school-inventory-software-indore-madhya-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Inventory Blogs -->
-  <url><loc>https://blog.veerexa.com/inventory/inventory-management-software-indore-madhya-pradesh.html</loc><priority>0.7</priority></url>
-  <url><loc>https://blog.veerexa.com/inventory/roi-inventory-management-software-sme.html</loc><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/inventory/inventory-management-software-indore-madhya-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/inventory/roi-inventory-management-software-sme.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Tech Blogs -->
-  <url><loc>https://blog.veerexa.com/tech/custom-software-development-advantages-india.html</loc><priority>0.7</priority></url>
-  <url><loc>https://blog.veerexa.com/tech/seo-marketing-strategies-indore-2026.html</loc><priority>0.7</priority></url>
-
+  <url><loc>https://blog.veerexa.com/tech/custom-software-development-advantages-india.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blog.veerexa.com/tech/seo-marketing-strategies-indore-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

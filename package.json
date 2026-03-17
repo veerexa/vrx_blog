@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Veerexa School Blog - School Management & Inventory Software insights for Indore, Madhya Pradesh and India",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

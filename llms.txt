@@ -5,14 +5,16 @@ Insights into Education Technology, Space Exploration, and Modern Software Devel
 ## Categories
 
 - [Education](/education/): School ERP, RFID, and digital administration.
-- [Space](/space/): ISRO missions, NASA updates, and lunar exploration.
-- [Tech](/tech/): Custom software development and SEO strategies.
+- [Career Lab](/education/career-lab/): STEM career paths, scholarships, and growth.
+- [ISRO Launches 2026](/space/isro-launches-2026-schedule.html): Upcoming schedules for PSLV, GSLV, and SSLV.
+- [India vs NASA Comparisons](/space/india-vs-nasa-space-missions.html): Technical and cost-efficiency benchmarks.
+- [Career Lab Hub](/education/career-lab/index.html): STEM, Medical, and Engineering career roadmaps.
 - [Inventory](/inventory/): Supply chain and stock management for SMEs.
 
 ## Featured Space Articles
 
-- [Chandrayaan-3 Success](/space/chandrayaan-3-success.html): Detailed analysis of India's lunar south pole landing.
-- [Gaganyaan Updates](/space/gaganyaan-mission-updates.html): The future of Indian human spaceflight.
+- [Chandrayaan Updates](/space/chandrayaan-3-success.html): Real-time analysis of India's lunar south pole landing.
+- [Gaganyaan Mission](/space/gaganyaan-mission-updates.html): Tracking the future of Indian human spaceflight.
 
 ## Core Services
 
