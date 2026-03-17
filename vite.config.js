@@ -2,55 +2,53 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // Multi-page application: list every HTML entry point
   build: {
     rollupOptions: {
       input: {
-        // Root pages
         main: resolve(__dirname, 'index.html'),
+        
+        // Category Index Pages
+        education: resolve(__dirname, 'education/index.html'),
+        space: resolve(__dirname, 'space/index.html'),
+        inventory: resolve(__dirname, 'inventory/index.html'),
 
-        // Blog listing
-        blogIndex: resolve(__dirname, 'blog/index.html'),
+        // Space Blogs
+        spaceChandrayaan: resolve(__dirname, 'space/chandrayaan-3-success.html'),
+        spaceGaganyaan: resolve(__dirname, 'space/gaganyaan-mission-updates.html'),
 
-        // Blog articles
-        blogBestSoftware: resolve(__dirname, 'blog/best-school-management-software-india.html'),
-        blogErpHelps: resolve(__dirname, 'blog/how-school-erp-software-helps-schools.html'),
-        blogFeatures: resolve(__dirname, 'blog/features-of-good-school-management-system.html'),
-        blogBenefits: resolve(__dirname, 'blog/benefits-of-school-management-software.html'),
-        blogDigitize: resolve(__dirname, 'blog/how-schools-can-digitize-administration.html'),
+        // Education Blogs
+        blogBestSoftware: resolve(__dirname, 'education/best-school-management-software-india.html'),
+        blogErpHelps: resolve(__dirname, 'education/how-school-erp-software-helps-schools.html'),
+        blogFeatures: resolve(__dirname, 'education/features-of-good-school-management-system.html'),
+        blogBenefits: resolve(__dirname, 'education/benefits-of-school-management-software.html'),
+        blogDigitize: resolve(__dirname, 'education/how-schools-can-digitize-administration.html'),
+        blogIndoreMP: resolve(__dirname, 'education/veerexa-school-inventory-software-indore-madhya-pradesh.html'),
+        cityIndore: resolve(__dirname, 'education/school-erp-indore.html'),
+        cityBhopal: resolve(__dirname, 'education/school-management-software-bhopal.html'),
+        cityBarwani: resolve(__dirname, 'education/school-erp-barwani.html'),
+        cityThikri: resolve(__dirname, 'education/school-software-thikri.html'),
+        cityMP: resolve(__dirname, 'education/school-erp-madhya-pradesh.html'),
 
-        // New article: Veerexa Indore / Madhya Pradesh
-        blogIndoreMP: resolve(__dirname, 'blog/veerexa-school-inventory-software-indore-madhya-pradesh.html'),
+        // Inventory Blogs
+        inventoryIndoreMP: resolve(__dirname, 'inventory/inventory-management-software-indore-madhya-pradesh.html'),
+        inventoryRoi: resolve(__dirname, 'inventory/roi-inventory-management-software-sme.html'),
 
-        // City landing pages — High-Traffic SEO Strategy
-        cityIndore: resolve(__dirname, 'blog/school-erp-indore.html'),
-        cityBhopal: resolve(__dirname, 'blog/school-management-software-bhopal.html'),
-        cityBarwani: resolve(__dirname, 'blog/school-erp-barwani.html'),
-        cityThikri: resolve(__dirname, 'blog/school-software-thikri.html'),
-        cityMP: resolve(__dirname, 'blog/school-erp-madhya-pradesh.html'),
-
-        // Inventory blog
-        inventoryIndoreMP: resolve(__dirname, 'blog/inventory-management-software-indore-madhya-pradesh.html'),
+        // Tech Blogs
+        techCustomDev: resolve(__dirname, 'tech/custom-software-development-advantages-india.html'),
+        techSeo: resolve(__dirname, 'tech/seo-marketing-strategies-indore-2026.html'),
       },
       output: {
-        // Keep clean asset filenames in dist/
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
       }
     }
   },
-
-  // Resolve paths relative to project root
   root: '.',
-
-  // Dev server config
   server: {
     port: 5173,
     open: true,
   },
-
-  // Preview server config
   preview: {
     port: 4173,
   }
