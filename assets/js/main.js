@@ -106,4 +106,66 @@
       }
     });
   }
+  /* --- MOSDAC RSS Feed Fetcher --- */
+  const alertsContainer = document.getElementById('mosdac-alerts-container');
+  if (alertsContainer) {
+    // We use allorigins as a CORS proxy since MOSDAC feed might not allow direct cross-origin access
+    const rssUrl = 'https://www.mosdac.gov.in/rss.xml';
+    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`;
+
+    fetch(proxyUrl)
+      .then(response => {
+        if (response.ok) return response.json();
+        throw new Error('Network response was not ok.');
+      })
+      .then(data => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data.contents, "text/xml");
+        const items = xmlDoc.querySelectorAll("item");
+        
+        // Clear skeleton loading
+        alertsContainer.innerHTML = '';
+
+        if (items.length === 0) {
+          alertsContainer.innerHTML = '<p class="text-sm text-slate-500">No active alerts right now.</p>';
+          return;
+        }
+
+        // Render up to 5 alerts
+        const alertsToRender = Array.from(items).slice(0, 5);
+        
+        alertsToRender.forEach(item => {
+          const title = item.querySelector("title")?.textContent || "Alert";
+          const link = item.querySelector("link")?.textContent || "#";
+          const description = item.querySelector("description")?.textContent || "";
+          
+          let alertDate = "";
+          const pubDateNode = item.querySelector("pubDate");
+          if (pubDateNode) {
+            const d = new Date(pubDateNode.textContent);
+            alertDate = isNaN(d) ? pubDateNode.textContent : d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+          }
+
+          const alertCard = document.createElement('a');
+          alertCard.href = link;
+          alertCard.target = "_blank";
+          alertCard.rel = "noopener noreferrer";
+          alertCard.className = "block bg-white hover:bg-indigo-50/50 p-4 rounded-xl border border-indigo-100 shadow-sm transition-colors group";
+          
+          alertCard.innerHTML = `
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">${title}</span>
+              ${description ? `<p class="text-xs text-slate-500 line-clamp-2">${description}</p>` : ''}
+              ${alertDate ? `<span class="text-[10px] text-slate-400 mt-1 font-medium">${alertDate}</span>` : ''}
+            </div>
+          `;
+          
+          alertsContainer.appendChild(alertCard);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching MOSDAC feed:', error);
+        alertsContainer.innerHTML = '<p class="text-sm text-red-400">Unable to load alerts at this time.</p>';
+      });
+  }
 })();

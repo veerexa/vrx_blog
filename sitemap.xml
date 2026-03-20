@@ -25,6 +25,11 @@
   <url><loc>https://blog.veerexa.com/space/gaganyaan-mission-updates.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://blog.veerexa.com/space/isro-launches-2026-schedule.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://blog.veerexa.com/space/india-vs-nasa-space-missions.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/space/moon-missions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/space/mars-missions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/space/future-missions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/space/indian-private-space-companies.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/space/isro-satellites-list.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Education Blogs -->
   <url><loc>https://blog.veerexa.com/education/best-school-management-software-india.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
