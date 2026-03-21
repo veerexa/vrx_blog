@@ -116,58 +116,78 @@
 
   <!-- BENTO GRID CATEGORIES -->
   <section class="pb-32 container mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-[300px]">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-[300px] md:auto-rows-[320px]">
       
       <!-- Education (Big) -->
-      <a href="/education/index.html" class="md:col-span-2 md:row-span-2 group glass-card !p-12 flex flex-col justify-end">
-        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform overflow-hidden shadow-sm border border-brand-violet/10">
-          <img src="assets/images/icon-education.png" alt="Education" class="w-full h-full object-cover">
+      <a href="/education/index.html" class="md:col-span-2 md:row-span-2 group glass-card !p-10 flex flex-col relative overflow-hidden bg-gradient-to-br from-indigo-50/30 to-white">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-violet/5 rounded-full blur-3xl -mr-20 -mt-20"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-brand-sky/5 rounded-full blur-3xl -mr-20 -mb-20"></div>
+        
+        <div class="flex-grow flex items-center justify-center mb-8 relative z-10 w-full h-full min-h-[50%]">
+          <img src="assets/images/icon-education.png" alt="Education" class="w-full h-full max-h-80 object-contain drop-shadow-2xl group-hover:scale-[1.05] transition-transform duration-700 ease-out">
         </div>
-        <h2 class="text-4xl font-display font-black text-slate-900 mb-4">Education Tech</h2>
-        <p class="text-slate-500 max-w-sm">RFID attendance, digital classrooms, and CBSE board updates. Empowering 3,000+ Indian institutions.</p>
-        <div class="mt-8 flex items-center gap-2 text-brand-violet font-bold text-sm">
-          Read Insights <span class="group-hover:translate-x-2 transition-transform">→</span>
+        
+        <div class="relative z-10 mt-auto">
+          <h2 class="text-4xl font-display font-black text-slate-900 mb-4">Education Tech</h2>
+          <p class="text-slate-500 max-w-sm text-lg">RFID attendance, digital classrooms, and CBSE board updates. Empowering 3,000+ Indian institutions.</p>
+          <div class="mt-8 flex items-center gap-2 text-brand-violet font-bold text-sm bg-brand-violet/5 w-max px-4 py-2 rounded-full">
+            Read Insights <span class="group-hover:translate-x-2 transition-transform">→</span>
+          </div>
         </div>
       </a>
 
       <!-- Space -->
-      <a href="/space/index.html" class="group glass-card !p-8 flex flex-col justify-end">
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden shadow-sm border border-brand-sky/10">
-          <img src="assets/images/icon-space.png" alt="Space" class="w-full h-full object-cover">
+      <a href="/space/index.html" class="group glass-card !p-8 flex flex-col relative overflow-hidden bg-gradient-to-b from-sky-50/50 to-white">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-sky-100/50 rounded-full blur-2xl -mr-10 -mt-10 z-0"></div>
+        <div class="flex-grow flex items-center justify-center mb-4 relative z-10 w-full h-full min-h-[40%]">
+          <img src="assets/images/icon-space.png" alt="Space" class="w-full h-full max-h-32 object-contain drop-shadow-xl group-hover:scale-110 transition-transform duration-500">
         </div>
-        <h2 class="text-2xl font-display font-black text-slate-900 mb-2">Space Core</h2>
-        <p class="text-sm text-slate-500">Live ISRO trackers, NASA updates, and deep space facts.</p>
+        <div class="relative z-10 mt-auto text-center md:text-left">
+          <h2 class="text-2xl font-display font-black text-slate-900 mb-2">Space Core</h2>
+          <p class="text-sm text-slate-500">Live ISRO trackers, NASA updates, and deep space facts.</p>
+        </div>
       </a>
 
       <!-- Inventory -->
-      <a href="/inventory/index.html" class="group glass-card !p-8 flex flex-col justify-end">
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden shadow-sm border border-emerald-200">
-          <img src="assets/images/icon-inventory.png" alt="Inventory" class="w-full h-full object-cover">
+      <a href="/inventory/index.html" class="group glass-card !p-8 flex flex-col relative overflow-hidden bg-gradient-to-b from-emerald-50/50 to-white">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-100/50 rounded-full blur-2xl -mr-10 -mt-10 z-0"></div>
+        <div class="flex-grow flex items-center justify-center mb-4 relative z-10 w-full h-full min-h-[40%]">
+          <img src="assets/images/icon-inventory.png" alt="Inventory" class="w-full h-full max-h-32 object-contain drop-shadow-xl group-hover:scale-110 transition-transform duration-500">
         </div>
-        <h2 class="text-2xl font-display font-black text-slate-900 mb-2">Inventory AI</h2>
-        <p class="text-sm text-slate-500">Smart stock management and supply chain ROI.</p>
+        <div class="relative z-10 mt-auto text-center md:text-left">
+          <h2 class="text-2xl font-display font-black text-slate-900 mb-2">Inventory AI</h2>
+          <p class="text-sm text-slate-500">Smart stock management and supply chain ROI.</p>
+        </div>
       </a>
 
       <!-- Tech -->
-      <a href="/tech/index.html" class="group glass-card !p-8 flex flex-col justify-end">
+      <a href="/tech/index.html" class="group glass-card !p-8 flex flex-col relative overflow-hidden bg-gradient-to-b from-pink-50/50 to-white">
         <div class="glass-glow top-0 right-0"></div>
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden shadow-sm border border-pink-200">
-          <img src="assets/images/icon-tech.png" alt="Tech Lab" class="w-full h-full object-cover">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-pink-100/50 rounded-full blur-2xl -mr-10 -mt-10 z-0"></div>
+        <div class="flex-grow flex items-center justify-center mb-4 relative z-10 w-full h-full min-h-[40%]">
+          <img src="assets/images/icon-tech.png" alt="Tech Lab" class="w-full h-full max-h-32 object-contain drop-shadow-xl group-hover:scale-110 transition-transform duration-500">
         </div>
-        <h2 class="text-2xl font-display font-black text-slate-900 mb-2">Tech Lab</h2>
-        <p class="text-sm text-slate-500">Custom software, SEO audits, and AI workflows.</p>
+        <div class="relative z-10 mt-auto text-center md:text-left">
+          <h2 class="text-2xl font-display font-black text-slate-900 mb-2">Tech Lab</h2>
+          <p class="text-sm text-slate-500">Custom software, SEO audits, and AI workflows.</p>
+        </div>
       </a>
 
       <!-- Career Lab (New) -->
-      <a href="/education/career-lab/index.html" class="md:col-span-2 group glass-card !p-12 flex flex-col justify-end relative overflow-hidden bg-gradient-to-br from-indigo-50/50 to-white">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full -mr-16 -mt-16"></div>
-        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-brand-violet/20 group-hover:scale-110 transition-transform overflow-hidden">
-          <img src="assets/images/icon-career.png" alt="Career Lab" class="w-full h-full object-cover">
+      <a href="/education/career-lab/index.html" class="md:col-span-2 group glass-card !p-10 flex flex-col md:flex-row relative overflow-hidden bg-gradient-to-br from-indigo-50/50 to-white items-center gap-6">
+        <div class="absolute top-0 right-0 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+        
+        <div class="flex-1 relative z-10">
+          <h2 class="text-3xl font-display font-black text-slate-900 mb-4">Veerexa Career Lab</h2>
+          <p class="text-slate-500 max-w-md">Guiding students through STEM career paths, scholarships, and professional growth opportunities in India.</p>
+          <div class="mt-6 flex items-center gap-2 text-brand-violet font-bold text-sm">
+            Plan Your Future <span class="group-hover:translate-x-2 transition-transform">→</span>
+          </div>
         </div>
-        <h2 class="text-3xl font-display font-black text-slate-900 mb-4">Veerexa Career Lab</h2>
-        <p class="text-slate-500 max-w-md">Guiding students through STEM career paths, scholarships, and professional growth opportunities in India.</p>
-        <div class="mt-8 flex items-center gap-2 text-brand-violet font-bold text-sm">
-          Plan Your Future <span class="group-hover:translate-x-2 transition-transform">→</span>
+        
+        <div class="w-full md:w-1/2 h-full min-h-[160px] flex items-center justify-center relative z-10">
+          <img src="assets/images/icon-career.png" alt="Career Lab" class="w-full h-full max-h-48 object-contain drop-shadow-2xl group-hover:scale-110 transition-transform duration-500">
         </div>
       </a>
     </div>
