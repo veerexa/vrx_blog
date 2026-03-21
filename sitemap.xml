@@ -19,6 +19,7 @@
   <url><loc>https://blog.veerexa.com/space/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://blog.veerexa.com/tech/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://blog.veerexa.com/inventory/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blog.veerexa.com/launchpad/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- Space Blogs -->
   <url><loc>https://blog.veerexa.com/space/chandrayaan-3-success.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
