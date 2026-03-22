@@ -67,7 +67,7 @@
             <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">×</div>
           </button>
         </div>
-        <div id="satellites-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="satellites-grid" class="grid grid-cols-1 gap-6">
           <!-- Satellites injected via JS -->
         </div>
       </div>
@@ -90,10 +90,10 @@
           color: 'bg-blue-50 text-blue-600 border-blue-200',
           desc: 'Supports telecommunication, television broadcasting, and DSP.',
           satellites: [
-            { name: 'GSAT-30', launch: 'Jan 2020', application: 'DTH, Television uplink' },
-            { name: 'CMS-01', launch: 'Dec 2020', application: 'Tele-education, Tele-medicine' },
-            { name: 'GSAT-31', launch: 'Feb 2019', application: 'VSAT Networks' },
-            { name: 'GSAT-7A', launch: 'Dec 2018', application: 'Military Communication' }
+            { name: 'GSAT-30', launch: 'Jan 2020', vehicle: 'Ariane 5', mass: '3357 kg', status: 'Active', application: 'DTH, Television uplink' },
+            { name: 'CMS-01', launch: 'Dec 2020', vehicle: 'PSLV-XL', mass: '1410 kg', status: 'Active', application: 'Tele-education, Tele-medicine' },
+            { name: 'GSAT-31', launch: 'Feb 2019', vehicle: 'Ariane 5', mass: '2536 kg', status: 'Active', application: 'VSAT Networks' },
+            { name: 'GSAT-7A', launch: 'Dec 2018', vehicle: 'GSLV Mk II', mass: '2250 kg', status: 'Active', application: 'Military Communication' }
           ]
         },
         {
@@ -103,10 +103,10 @@
           color: 'bg-emerald-50 text-emerald-600 border-emerald-200',
           desc: 'Remote sensing for agriculture, water resources, and urban planning.',
           satellites: [
-            { name: 'EOS-04', launch: 'Feb 2022', application: 'Radar Imaging, Agriculture' },
-            { name: 'EOS-03', launch: 'Aug 2021', application: 'Real-time observation' },
-            { name: 'Cartosat-3', launch: 'Nov 2019', application: 'High-res mapping' },
-            { name: 'RISAT-2BR1', launch: 'Dec 2019', application: 'Radar surveillance' }
+            { name: 'EOS-04', launch: 'Feb 2022', vehicle: 'PSLV-C52', mass: '1710 kg', status: 'Active', application: 'Radar Imaging, Agriculture' },
+            { name: 'EOS-03', launch: 'Aug 2021', vehicle: 'GSLV-F10', mass: '2268 kg', status: 'Failed', application: 'Real-time observation' },
+            { name: 'Cartosat-3', launch: 'Nov 2019', vehicle: 'PSLV-C47', mass: '1625 kg', status: 'Active', application: 'High-res mapping' },
+            { name: 'RISAT-2BR1', launch: 'Dec 2019', vehicle: 'PSLV-C48', mass: '628 kg', status: 'Active', application: 'Radar surveillance' }
           ]
         },
         {
@@ -116,10 +116,10 @@
           color: 'bg-purple-50 text-purple-600 border-purple-200',
           desc: 'Deep space exploration, astronomy, and planetary sciences.',
           satellites: [
-            { name: 'Aditya-L1', launch: 'Sep 2023', application: 'Solar Observatory' },
-            { name: 'Chandrayaan-3', launch: 'Jul 2023', application: 'Lunar Surface Exploration' },
-            { name: 'AstroSat', launch: 'Sep 2015', application: 'Multi-wavelength astronomy' },
-            { name: 'Mangalyaan (MOM)', launch: 'Nov 2013', application: 'Mars Exosphere analysis' }
+            { name: 'Aditya-L1', launch: 'Sep 2023', vehicle: 'PSLV-XL', mass: '1475 kg', status: 'Active', application: 'Solar Observatory' },
+            { name: 'Chandrayaan-3', launch: 'Jul 2023', vehicle: 'LVM3 M4', mass: '3900 kg', status: 'Success', application: 'Lunar Surface Exploration' },
+            { name: 'AstroSat', launch: 'Sep 2015', vehicle: 'PSLV-XL', mass: '1515 kg', status: 'Active', application: 'Multi-wavelength astronomy' },
+            { name: 'Mangalyaan (MOM)', launch: 'Nov 2013', vehicle: 'PSLV-XL', mass: '1337 kg', status: 'Completed', application: 'Mars Exosphere analysis' }
           ]
         },
         {
@@ -129,9 +129,9 @@
           color: 'bg-orange-50 text-orange-600 border-orange-200',
           desc: 'Satellite-based navigation systems for India and surroundings.',
           satellites: [
-            { name: 'NVS-01', launch: 'May 2023', application: 'NavIC positioning services' },
-            { name: 'IRNSS-1I', launch: 'Apr 2018', application: 'Regional Navigation' },
-            { name: 'IRNSS-1G', launch: 'Apr 2016', application: 'Standard Positioning' }
+            { name: 'NVS-01', launch: 'May 2023', vehicle: 'GSLV-F12', mass: '2232 kg', status: 'Active', application: 'NavIC positioning services' },
+            { name: 'IRNSS-1I', launch: 'Apr 2018', vehicle: 'PSLV-XL', mass: '1425 kg', status: 'Active', application: 'Regional Navigation' },
+            { name: 'IRNSS-1G', launch: 'Apr 2016', vehicle: 'PSLV-XL', mass: '1425 kg', status: 'Active', application: 'Standard Positioning' }
           ]
         },
         {
@@ -141,8 +141,8 @@
           color: 'bg-rose-50 text-rose-600 border-rose-200',
           desc: 'Testing new tech, payload configurations, and recovery modules.',
           satellites: [
-            { name: 'INS-2TD', launch: 'Feb 2022', application: 'Tech Demonstrator' },
-            { name: 'XPoSat', launch: 'Jan 2024', application: 'X-ray Polarimeter' }
+            { name: 'INS-2TD', launch: 'Feb 2022', vehicle: 'PSLV-C52', mass: '17 kg', status: 'Deorbited', application: 'Tech Demonstrator' },
+            { name: 'XPoSat', launch: 'Jan 2024', vehicle: 'PSLV-DL', mass: '480 kg', status: 'Active', application: 'X-ray Polarimeter' }
           ]
         },
         {
@@ -152,9 +152,9 @@
           color: 'bg-sky-50 text-sky-600 border-sky-200',
           desc: 'Nano-satellites built by academic institutions across India.',
           satellites: [
-            { name: 'Kalamsat-V2', launch: 'Jan 2019', application: 'Amateur radio' },
-            { name: 'Pratham', launch: 'Sep 2016', application: 'Electron count measure' },
-            { name: 'Satyabamasat', launch: 'Jun 2016', application: 'Greenhouse gas collection' }
+            { name: 'Kalamsat-V2', launch: 'Jan 2019', vehicle: 'PSLV-DL', mass: '1.2 kg', status: 'Deorbited', application: 'Amateur radio' },
+            { name: 'Pratham', launch: 'Sep 2016', vehicle: 'PSLV-G', mass: '10 kg', status: 'Deorbited', application: 'Electron count measure' },
+            { name: 'Satyabamasat', launch: 'Jun 2016', vehicle: 'PSLV-XL', mass: '1.5 kg', status: 'Deorbited', application: 'Greenhouse gas collection' }
           ]
         }
       ];
@@ -196,18 +196,45 @@
         viewerTitle.innerHTML = `<span class="mr-3">${cat.icon}</span>${cat.title} Spacecraft`;
         satGrid.innerHTML = '';
         
+        let tableHTML = `
+          <div class="overflow-x-auto w-full col-span-1 md:col-span-2 lg:col-span-3">
+            <table class="w-full text-left border-collapse min-w-[800px]">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200">
+                  <th class="py-4 px-6 font-bold text-slate-900 uppercase text-xs tracking-widest">Spacecraft</th>
+                  <th class="py-4 px-6 font-bold text-slate-900 uppercase text-xs tracking-widest">Launch Date</th>
+                  <th class="py-4 px-6 font-bold text-slate-900 uppercase text-xs tracking-widest">Vehicle / Mass</th>
+                  <th class="py-4 px-6 font-bold text-slate-900 uppercase text-xs tracking-widest">Status</th>
+                  <th class="py-4 px-6 font-bold text-slate-900 uppercase text-xs tracking-widest">Application</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+        `;
+        
         cat.satellites.forEach(sat => {
-          satGrid.innerHTML += `
-            <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-              <div class="flex items-center justify-between mb-4">
-                <h4 class="text-xl font-display font-bold text-slate-900">${sat.name}</h4>
-                <span class="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-widest">${sat.launch}</span>
-              </div>
-              <p class="text-sm text-slate-600"><span class="font-bold text-slate-800">Application:</span> ${sat.application}</p>
-              <button class="mt-6 text-xs font-bold text-[#7c3aed] uppercase tracking-widest hover:text-[#0ea5e9] transition-colors">View Mission Profile →</button>
-            </div>
+          let statusStyle = sat.status === 'Active' ? 'bg-emerald-50 text-emerald-600' : 
+                           (sat.status === 'Failed' ? 'bg-red-50 text-red-600' : 'bg-slate-100 text-slate-600');
+          tableHTML += `
+            <tr class="hover:bg-slate-50/50 transition-colors bg-white">
+              <td class="py-5 px-6 font-display font-bold text-slate-900 text-lg">${sat.name}</td>
+              <td class="py-5 px-6 text-slate-600"><span class="bg-slate-100 px-3 py-1 rounded-full text-xs font-semibold">${sat.launch}</span></td>
+              <td class="py-5 px-6 text-slate-600 text-sm">
+                <div><span class="font-medium text-slate-800">${sat.vehicle}</span></div>
+                <div class="text-slate-400 text-xs mt-1">${sat.mass}</div>
+              </td>
+              <td class="py-5 px-6 text-slate-600"><span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${statusStyle}">${sat.status}</span></td>
+              <td class="py-5 px-6 text-slate-600 text-sm">${sat.application}</td>
+            </tr>
           `;
         });
+        
+        tableHTML += `
+              </tbody>
+            </table>
+          </div>
+        `;
+        satGrid.innerHTML = tableHTML;
+
 
         viewer.classList.remove('hidden');
         // small timeout to allow display:block to apply before animating opacity
