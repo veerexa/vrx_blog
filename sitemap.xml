@@ -52,4 +52,9 @@
   <!-- Tech Blogs -->
   <url><loc>https://blog.veerexa.com/tech/custom-software-development-advantages-india.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://blog.veerexa.com/tech/seo-marketing-strategies-indore-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://blog.veerexa.com/education/best-school-in-thikri.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>
