@@ -297,6 +297,7 @@ a:hover{color:var(--accent);}
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.25rem;
   color: var(--text-muted);
   text-decoration: none;
@@ -307,6 +308,8 @@ a:hover{color:var(--accent);}
   transition: all var(--ease);
   flex: 0 0 auto;
   min-width: 65px;
+  padding: 0.4rem 0.2rem;
+  border-radius: 1rem;
 }
 
 .mobile-nav-item .icon {
@@ -314,12 +317,18 @@ a:hover{color:var(--accent);}
   transition: transform var(--ease);
 }
 
-.mobile-nav-item:hover, .mobile-nav-item.active {
+.mobile-nav-item:hover {
   color: var(--primary);
+  background: var(--primary-glow);
+}
+
+.mobile-nav-item.active {
+  color: var(--primary);
+  background: var(--primary-glow);
 }
 
 .mobile-nav-item.active .icon {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.1);
 }
 
 @media (max-width: 768px) {

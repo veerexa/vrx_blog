@@ -76,10 +76,13 @@
         <a href="https://school.veerexa.com" class="hidden lg:flex items-center gap-2 bg-brand-violet hover:bg-brand-violet/90 hover:-translate-y-0.5 transition-all text-white px-6 py-2.5 rounded-full font-display font-bold text-sm shadow-md shadow-brand-violet/20">
           Free Demo
         </a>
-        <button id="nav-toggle" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 bg-slate-100 rounded-lg">
-          <span class="w-5 h-0.5 bg-slate-600 rounded-full"></span>
-          <span class="w-5 h-0.5 bg-slate-600 rounded-full"></span>
-          <span class="w-5 h-0.5 bg-slate-600 rounded-full"></span>
+        <button onclick="openSearchModal()" class="w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full text-slate-600 hover:text-[#7c3aed] hover:bg-[#7c3aed]/10 transition-all shadow-sm">
+          <span>🔍</span>
+        </button>
+        <button id="nav-toggle" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 bg-slate-100 rounded-full">
+          <span class="w-4 h-0.5 bg-slate-600 rounded-full"></span>
+          <span class="w-4 h-0.5 bg-slate-600 rounded-full"></span>
+          <span class="w-4 h-0.5 bg-slate-600 rounded-full"></span>
         </button>
       </div>
     </div>
@@ -429,8 +432,31 @@
         <span class="icon">🎓</span>
         <span>Career</span>
       </a>
+      <a href="#" onclick="openSearchModal(); return false;" class="mobile-nav-item">
+        <span class="icon">🔍</span>
+        <span>Search</span>
+      </a>
     </div>
   </nav>
+
+  <!-- Search Modal Container -->
+  <div id="search-modal" class="fixed inset-0 z-[9999] bg-slate-900/80 backdrop-blur-xl hidden flex-col transition-opacity duration-300 opacity-0">
+    <div class="container mx-auto px-6 py-6 h-full flex flex-col">
+      <div class="flex items-center justify-between mb-8">
+        <h3 class="text-2xl font-display font-black text-white">Search Hub</h3>
+        <button onclick="closeSearchModal()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-brand-violet hover:rotate-90 transition-all duration-300">
+          ✕
+        </button>
+      </div>
+      <div class="relative mb-8">
+        <input type="text" id="search-input" placeholder="Search insights, missions, tech..." class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white text-xl focus:outline-none focus:border-brand-violet/60 focus:bg-white/20 transition-all placeholder:text-white/40" autocomplete="off" onkeyup="performSearch()">
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 text-2xl">🔍</span>
+      </div>
+      <div id="search-results" class="flex-1 overflow-y-auto space-y-4 pb-20 custom-scrollbar pr-2">
+        <!-- Results injected here via JS -->
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="assets/js/main.js" defer></script>
 </body>

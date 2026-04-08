@@ -168,4 +168,78 @@
         alertsContainer.innerHTML = '<p class="text-sm text-red-400">Unable to load alerts at this time.</p>';
       });
   }
+
+  /* --- Search Modal Logic --- */
+  window.openSearchModal = function() {
+    const modal = document.getElementById('search-modal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      // small delay to allow display block to apply before animating opacity
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        document.getElementById('search-input')?.focus();
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeSearchModal = function() {
+    const modal = document.getElementById('search-modal');
+    if (modal) {
+      modal.classList.add('opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+      document.body.style.overflow = '';
+      document.getElementById('search-input').value = '';
+      document.getElementById('search-results').innerHTML = '';
+    }
+  };
+
+  // Predefined search index since it's a static site
+  const searchIndex = [
+    { title: "The Rise of Indian Private Space Tech", url: "/space/indian-private-space-companies.html", desc: "Skyroot, Agnikul, Pixxel, Bellatrix" },
+    { title: "India's Lunar Missions", url: "/space/moon-missions.html", desc: "Chandrayaan missions overview" },
+    { title: "Mangalyaan & Mars", url: "/space/mars-missions.html", desc: "India's Mars Orbiter Mission deep dive" },
+    { title: "LLM Models Guide", url: "/tech/llm-models-guide.html", desc: "Comprehensive guide to modern AI LLMs" },
+    { title: "School ERP Software", url: "/education/how-school-erp-software-helps-schools.html", desc: "How school ERPs boost productivity" },
+    { title: "Medical Careers Guide", url: "/education/career-lab/medical-careers-guide-india.html", desc: "NEET Prep and medical career roadmap" },
+    { title: "Join ISRO After 12th", url: "/education/career-lab/science-research-isro-careers.html", desc: "Roadmap to joining ISRO" },
+    { title: "Tech Career Roadmap", url: "/education/career-lab/engineering-tech-career-roadmap.html", desc: "Engineering and software development guide" },
+    { title: "ROI on Inventory Management", url: "/inventory/roi-inventory-management-software-sme.html", desc: "Supply chain optimization" },
+    { title: "Defense Core Index", url: "/defense/index.html", desc: "Defense weaponry and jets" },
+    { title: "Launchpad Workspace", url: "/launchpad/index.html", desc: "Free personal website builder" },
+    { title: "Skyroot Aerospace", url: "/space/skyroot-aerospace.html", desc: "India's first private launch vehicle" },
+    { title: "Agnikul Cosmos", url: "/space/agnikul-cosmos.html", desc: "Agnibaan and 3D printed engines" },
+    { title: "Pixxel Space", url: "/space/pixxel-space.html", desc: "Hyperspectral earth imaging" },
+    { title: "Bellatrix Aerospace", url: "/space/bellatrix-aerospace.html", desc: "Water-powered in-space thrusters" }
+  ];
+
+  window.performSearch = function() {
+    const query = document.getElementById('search-input').value.toLowerCase();
+    const resultsContainer = document.getElementById('search-results');
+    
+    if (query.trim() === '') {
+      resultsContainer.innerHTML = '';
+      return;
+    }
+
+    const filtered = searchIndex.filter(item => 
+      item.title.toLowerCase().includes(query) || 
+      item.desc.toLowerCase().includes(query)
+    );
+
+    if (filtered.length === 0) {
+      resultsContainer.innerHTML = '<p class="text-white/60 text-center py-8">No results found for "'+ query +'"</p>';
+      return;
+    }
+
+    resultsContainer.innerHTML = filtered.map(item => `
+      <a href="${item.url}" class="block bg-white/5 hover:bg-white/10 p-4 rounded-xl border border-white/10 transition-all group">
+        <h4 class="text-lg font-bold text-white group-hover:text-brand-sky transition-colors">${item.title}</h4>
+        <p class="text-white/60 text-sm mt-1">${item.desc}</p>
+      </a>
+    `).join('');
+  };
+
 })();

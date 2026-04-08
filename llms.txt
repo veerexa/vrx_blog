@@ -11,10 +11,18 @@ Insights into Education Technology, Space Exploration, and Modern Software Devel
 - [Career Lab Hub](/education/career-lab/index.html): STEM, Medical, and Engineering career roadmaps.
 - [Inventory](/inventory/): Supply chain and stock management for SMEs.
 
+- [Tech Lab](/tech/): Software architecture, SEO insights, and AI capabilities.
+- [LLM Models Guide](/tech/llm-models-guide.html): A deep dive into modern LLMs.
+
 ## Featured Space Articles
 
 - [Chandrayaan Updates](/space/chandrayaan-3-success.html): Real-time analysis of India's lunar south pole landing.
 - [Gaganyaan Mission](/space/gaganyaan-mission-updates.html): Tracking the future of Indian human spaceflight.
+- [Private Space Startups](/space/indian-private-space-companies.html): Rise of Skyroot, Agnikul, Pixxel, and Bellatrix.
+- [Skyroot Aerospace](/space/skyroot-aerospace.html): India's first private launch vehicle.
+- [Agnikul Cosmos](/space/agnikul-cosmos.html): Mobile launch platforms and 3D printed engines.
+- [Pixxel](/space/pixxel-space.html): Hyperspectral earth imaging satellites.
+- [Bellatrix Aerospace](/space/bellatrix-aerospace.html): Water-powered in-space propulsion.
 
 ## Core Services
 
