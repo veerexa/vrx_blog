@@ -10,30 +10,48 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-violet': '#7c3aed',
+            'brand-sky': '#0ea5e9',
+            'brand-text': '#1e293b',
+          },
+          fontFamily: {
+            display: ['Outfit', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="assets/css/launchpad.css">
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container header-inner">
-      <a href="../index.html" class="logo">
-        <div class="logo-box">V</div>
-        <span class="logo-text">Veer<span class="text-violet">exa</span> Launchpad</span>
+  <header class="sticky top-0 z-[200] bg-white/70 backdrop-blur-md border-b border-slate-200/50">
+    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-3 decoration-none group">
+        <div class="w-10 h-10 bg-gradient-to-br from-brand-violet to-brand-sky rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-brand-violet/20 group-hover:scale-105 transition-transform">V</div>
+        <span class="text-2xl font-display font-black text-slate-900 tracking-tight">Veer<span class="text-brand-violet">exa</span></span>
       </a>
-      <nav class="header-nav">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="../education/index.html" class="nav-link">Education</a>
-        <a href="../space/index.html" class="nav-link">Space</a>
-        <a href="../defense/index.html" class="nav-link">Defense</a>
-        <a href="../tech/index.html" class="nav-link">Tech Lab</a>
-        <a href="../inventory/index.html" class="nav-link">Inventory</a>
-        <a href="../education/career-lab/index.html" class="nav-link">Career Lab</a>
-        <a href="../launchpad/index.html" class="nav-link active">Launchpad</a>
+      <nav class="hidden md:flex items-center gap-2 nav-links">
+        <a href="../index.html" class="px-5 py-2 rounded-full text-sm font-semibold bg-slate-100 text-brand-violet">Home</a>
+        <a href="../education/index.html" class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-brand-violet hover:bg-brand-violet/5 transition-all">Education</a>
+        <a href="../space/index.html" class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-brand-violet hover:bg-brand-violet/5 transition-all">Space</a>
+        <a href="../defense/index.html" class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-brand-violet hover:bg-brand-violet/5 transition-all">Defense</a>
+        <a href="../tech/index.html" class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-brand-violet hover:bg-brand-violet/5 transition-all">Tech Lab</a>
+        <a href="../inventory/index.html" class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-brand-violet hover:bg-brand-violet/5 transition-all">Inventory</a>
+        <a href="../education/career-lab/index.html" class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-brand-violet hover:bg-brand-violet/5 transition-all">Career Lab</a>
+        <a href="../launchpad/index.html" class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-brand-violet hover:bg-brand-violet/5 transition-all bg-slate-100 text-brand-violet">Launchpad</a>
       </nav>
-      <div class="header-actions">
-        <button onclick="openSearchModal()" class="btn btn-outline header-search" aria-label="Open search">🔍</button>
-        <a href="mailto:admin@veerexa.com" class="btn btn-outline sm-hidden">Apply Now</a>
+      <div class="flex items-center gap-4">
+        <a href="mailto:admin@veerexa.com" class="hidden lg:flex items-center gap-2 bg-brand-violet hover:bg-brand-violet/90 transition-all text-white px-6 py-2.5 rounded-full font-display font-bold text-sm shadow-md shadow-brand-violet/20">Apply Now</a>
+        <button onclick="openSearchModal()" class="w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full text-slate-600 hover:text-brand-violet hover:bg-brand-violet/10 transition-all shadow-sm" aria-label="Open search">🔍</button>
       </div>
     </div>
   </header>
