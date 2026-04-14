@@ -70,6 +70,83 @@ code {
   padding: 0 1.5rem;
 }
 
+/* Tailwind-style utilities used by launchpad page */
+.hidden { display: none !important; }
+.fixed { position: fixed !important; }
+.w-full { width: 100% !important; }
+.w-10 { width: 2.5rem !important; }
+.h-10 { height: 2.5rem !important; }
+.h-20 { height: 5rem !important; }
+.rounded-full { border-radius: 9999px !important; }
+.rounded-xl { border-radius: 1rem !important; }
+.rounded-2xl { border-radius: 1.5rem !important; }
+.rounded-\[2rem\] { border-radius: 2rem !important; }
+.px-6 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+.py-10 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+.pt-24 { padding-top: 6rem !important; }
+.pb-10 { padding-bottom: 2.5rem !important; }
+.pr-2 { padding-right: 0.5rem !important; }
+.mt-6 { margin-top: 1.5rem !important; }
+.mb-6 { margin-bottom: 1.5rem !important; }
+.gap-2 { gap: 0.5rem !important; }
+.gap-3 { gap: 0.75rem !important; }
+.gap-4 { gap: 1rem !important; }
+.flex { display: flex !important; }
+.flex-col { display: flex !important; flex-direction: column !important; }
+.items-center { align-items: center !important; }
+.justify-between { justify-content: space-between !important; }
+.justify-center { justify-content: center !important; }
+.text-slate-600 { color: #475569 !important; }
+.text-slate-900 { color: #0f172a !important; }
+.text-white { color: #ffffff !important; }
+.text-brand-violet { color: var(--brand-violet) !important; }
+.bg-slate-100 { background-color: #f1f5f9 !important; }
+.bg-white\/10 { background-color: rgba(255,255,255,0.1) !important; }
+.bg-slate-900\/95 { background-color: rgba(15,23,42,0.95) !important; }
+.bg-slate-900\/80 { background-color: rgba(15,23,42,0.8) !important; }
+.bg-brand-violet { background-color: var(--brand-violet) !important; }
+.bg-brand-violet\/10 { background-color: rgba(124,58,237,0.1) !important; }
+.bg-brand-violet\/90:hover { background-color: rgba(124,58,237,0.9) !important; }
+.bg-gradient-to-br { background: linear-gradient(135deg, var(--brand-violet) 0%, var(--brand-sky) 100%) !important; }
+.text-xl { font-size: 1.25rem !important; }
+.text-2xl { font-size: 1.5rem !important; }
+.text-sm { font-size: 0.875rem !important; }
+.font-display { font-family: var(--font-display) !important; }
+.top-6 { top: 1.5rem !important; }
+.right-6 { right: 1.5rem !important; }
+.space-y-4 > * + * { margin-top: 1rem !important; }
+.font-black { font-weight: 800 !important; }
+.font-semibold { font-weight: 600 !important; }
+.border { border-width: 1px !important; border-style: solid !important; }
+.border-white\/10 { border-color: rgba(255,255,255,0.1) !important; }
+.border-white\/20 { border-color: rgba(255,255,255,0.2) !important; }
+.border-slate-200\/50 { border-color: rgba(148,163,184,0.5) !important; }
+.bg-white\/70 { background-color: rgba(255,255,255,0.7) !important; }
+.backdrop-blur-md { backdrop-filter: blur(14px) !important; -webkit-backdrop-filter: blur(14px) !important; }
+.backdrop-blur-xl { backdrop-filter: blur(20px) !important; -webkit-backdrop-filter: blur(20px) !important; }
+.transition-all { transition: all 0.2s ease !important; }
+.transition-transform { transition: transform 0.2s ease !important; }
+.transition-opacity { transition-property: opacity !important; transition-duration: 0.3s !important; transition-timing-function: ease !important; }
+.duration-300 { transition-duration: 0.3s !important; }
+.opacity-0 { opacity: 0 !important; }
+.group { position: relative !important; }
+.group-hover\:scale-105:hover { transform: scale(1.05) !important; }
+.hover\:text-brand-violet:hover { color: var(--brand-violet) !important; }
+.hover\:bg-brand-violet\/10:hover { background-color: rgba(124,58,237,0.1) !important; }
+.hover\:bg-brand-violet\/90:hover { background-color: rgba(124,58,237,0.9) !important; }
+.focus\:outline-none:focus { outline: none !important; }
+.focus\:border-brand-violet\/60:focus { border-color: rgba(124,58,237,0.6) !important; }
+.focus\:bg-white\/20:focus { background-color: rgba(255,255,255,0.2) !important; }
+.z-\[9999\] { z-index: 9999 !important; }
+.fixed.inset-0 { top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; }
+
+@media (min-width: 768px) {
+  .md\:flex { display: flex !important; }
+}
+@media (min-width: 1024px) {
+  .lg\:flex { display: flex !important; }
+}
+
 /* Typography Utilities */
 .text-center { text-align: center; }
 .text-violet { color: var(--brand-violet); }
