@@ -16,25 +16,25 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="container header-inner" style="align-items:center; gap:1rem;">
+    <div class="container header-inner">
       <a href="../index.html" class="logo">
         <div class="logo-box">V</div>
         <span class="logo-text">Veer<span class="text-violet">exa</span> Launchpad</span>
       </a>
-      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-        <nav style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center;">
-          <a href="../index.html" style="color:#334155; font-weight:600; text-decoration:none;">Home</a>
-          <a href="../education/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Education</a>
-          <a href="../space/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Space</a>
-          <a href="../defense/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Defense</a>
-          <a href="../tech/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Tech Lab</a>
-          <a href="../inventory/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Inventory</a>
-          <a href="../education/career-lab/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Career Lab</a>
-          <a href="../launchpad/index.html" style="color:#7c3aed; font-weight:700; text-decoration:none;">Launchpad</a>
-        </nav>
-        <button onclick="openSearchModal()" class="btn btn-outline" style="min-width:3rem;">🔍</button>
+      <nav class="header-nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../education/index.html" class="nav-link">Education</a>
+        <a href="../space/index.html" class="nav-link">Space</a>
+        <a href="../defense/index.html" class="nav-link">Defense</a>
+        <a href="../tech/index.html" class="nav-link">Tech Lab</a>
+        <a href="../inventory/index.html" class="nav-link">Inventory</a>
+        <a href="../education/career-lab/index.html" class="nav-link">Career Lab</a>
+        <a href="../launchpad/index.html" class="nav-link active">Launchpad</a>
+      </nav>
+      <div class="header-actions">
+        <button onclick="openSearchModal()" class="btn btn-outline header-search" aria-label="Open search">🔍</button>
+        <a href="mailto:admin@veerexa.com" class="btn btn-outline sm-hidden">Apply Now</a>
       </div>
-      <a href="mailto:admin@veerexa.com" class="btn btn-outline sm-hidden">Apply Now</a>
     </div>
   </header>
 
@@ -85,6 +85,17 @@
             <li>✅ Fully curated & verified by Veerexa</li>
             <li>✅ Increases visibility and networking opportunities</li>
           </ul>
+          <div class="launchpad-detail" style="margin-top:2rem;">
+            <h3 class="text-xl font-bold text-slate-900 mb-4">What makes Launchpad unique?</h3>
+            <p class="text-slate-600 mb-4">Veerexa Launchpad is more than a website platform — it is a launch system for ambitious students, founders, and researchers. We support content strategy, project storytelling, and verified publishing so your profile is ready for mentors, recruiters, and collaborators.</p>
+            <p class="text-slate-600 mb-4">Every page is built with clear structure, mobile-first design, and search-friendly content. You get a polished online presence backed by our team’s local expertise and promotion across the Veerexa ecosystem.</p>
+            <ul class="feature-list">
+              <li>📌 Guided profile review and page structure support</li>
+              <li>🧭 Content optimized for clarity, impact, and discovery</li>
+              <li>📱 Mobile-friendly page design with fast loading</li>
+              <li>🌍 Optional custom domain and verified badge support</li>
+            </ul>
+          </div>
         </div>
         <div class="about-card glass-card hover-lift">
           <div class="icon-box bg-violet-light" style="margin: 0; margin-bottom: 1.5rem;">🚀</div>
