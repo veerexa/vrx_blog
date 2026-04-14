@@ -16,11 +16,24 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="container header-inner">
+    <div class="container header-inner" style="align-items:center; gap:1rem;">
       <a href="../index.html" class="logo">
         <div class="logo-box">V</div>
         <span class="logo-text">Veer<span class="text-violet">exa</span> Launchpad</span>
       </a>
+      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+        <nav style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center;">
+          <a href="../index.html" style="color:#334155; font-weight:600; text-decoration:none;">Home</a>
+          <a href="../education/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Education</a>
+          <a href="../space/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Space</a>
+          <a href="../defense/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Defense</a>
+          <a href="../tech/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Tech Lab</a>
+          <a href="../inventory/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Inventory</a>
+          <a href="../education/career-lab/index.html" style="color:#334155; font-weight:600; text-decoration:none;">Career Lab</a>
+          <a href="../launchpad/index.html" style="color:#7c3aed; font-weight:700; text-decoration:none;">Launchpad</a>
+        </nav>
+        <button onclick="openSearchModal()" class="btn btn-outline" style="min-width:3rem;">🔍</button>
+      </div>
       <a href="mailto:admin@veerexa.com" class="btn btn-outline sm-hidden">Apply Now</a>
     </div>
   </header>
@@ -65,9 +78,10 @@
       <div class="about-grid">
         <div class="about-content">
           <h2 class="section-title">What is <span class="text-violet">Veerexa Launchpad?</span></h2>
-          <p class="section-desc" style="margin-left: 0; text-align: left;">Veerexa Launchpad is a highly curated platform designed to help emerging talent and innovative startups build their online identity. We verify and publish selected profiles to increase your visibility, credibility, and reach.</p>
+          <p class="section-desc" style="margin-left: 0; text-align: left;">Veerexa Launchpad is a highly curated platform for students, startups, and research scholars. We help ambitious learners bring ideas to life with dedicated student support, mentorship, and verified publishing to increase innovation and visibility.</p>
           <ul class="feature-list">
             <li>✅ Build a strong, professional online identity</li>
+            <li>✅ Dedicated student support to increase innovation</li>
             <li>✅ Fully curated & verified by Veerexa</li>
             <li>✅ Increases visibility and networking opportunities</li>
           </ul>
@@ -147,6 +161,20 @@
     </div>
   </section>
 
+  <section class="student-support bg-sky-light">
+    <div class="container">
+      <div class="support-box glass-card hover-lift p-10">
+        <h2 class="section-title">Student Innovation Support</h2>
+        <p class="section-desc">We provide mentorship, project showcase tools, and free Veerexa-hosted pages so students can turn ideas into real innovation.</p>
+        <ul class="feature-list">
+          <li>🎓 Dedicated support for student innovators at school and college level</li>
+          <li>💡 Mentorship for portfolio building, prototypes, and startup pitches</li>
+          <li>🌐 Free Veerexa-hosted pages to share projects with recruiters and investors</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- Already Have a Website -->
   <section class="bring-your-own">
     <div class="container">
@@ -212,6 +240,33 @@
         </div>
         <div class="faq-item">
           <div class="faq-question">
+            <span>How does student support work?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Our team offers dedicated guidance for student innovators, helping with portfolio structure, project storytelling, and exposure through Veerexa Launchpad.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How long does publishing take?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Once submitted, most pages are reviewed and published within 5-7 business days, depending on the application volume.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I update my page later?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. After publishing, you can submit updates or new project details any time by emailing the Launchpad team.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
             <span>Can I use my own custom domain?</span>
             <span class="faq-icon">+</span>
           </div>
@@ -243,6 +298,19 @@
       <p class="text-slate-500 text-sm">© 2026 Veerexa Technologies. All rights reserved.</p>
     </div>
   </footer>
+
+  <div id="search-modal" class="fixed inset-0 z-[9999] bg-slate-900/80 backdrop-blur-xl hidden flex-col transition-opacity duration-300 opacity-0">
+    <div class="container mx-auto px-6 py-10 max-w-3xl">
+      <div class="relative rounded-[2rem] bg-slate-900/95 border border-white/10 p-8 shadow-2xl">
+        <button onclick="closeSearchModal()" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-brand-violet transition-all">✕</button>
+        <h3 class="text-3xl font-display font-black text-white mb-6">Search Hub</h3>
+        <input type="text" id="search-input" placeholder="Search insights, missions, tech..." class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white text-xl focus:outline-none focus:border-brand-violet/60 focus:bg-white/20" autocomplete="off" onkeyup="performSearch()">
+        <div id="search-results" class="mt-6 flex-1 overflow-y-auto space-y-4 pb-10 custom-scrollbar pr-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
   <script type="module" src="assets/js/launchpad.js"></script>
 </body>
 </html>
