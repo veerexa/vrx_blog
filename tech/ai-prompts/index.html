@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>AI Prompt Hub — Best ChatGPT & Gemini Prompts for Images & Art</title>
+    <meta name="description"
+        content="A free collection of the best AI image prompts for ChatGPT and Gemini. Generate infographics, anime art, cinematic film stills, botanical illustrations, pixel art, and more with copy-ready prompts.">
+    <meta name="keywords"
+        content="AI prompts, ChatGPT prompts, Gemini prompts, AI image generation, image prompts, AI art prompts, best prompts 2025">
+    <meta property="og:title" content="AI Prompt Hub — Best ChatGPT & Gemini Image Prompts">
+    <meta property="og:description"
+        content="Copy-ready AI prompts for stunning image generation. Anime, cinematic, botanical, pixel art and more.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ── TOKENS ── */
+        :root {
+            --bg: #f7f8fa;
+            --bg2: #eef0f4;
+            --surface: #ffffff;
+            --surface2: #f1f3f7;
+            --border: rgba(0, 0, 0, 0.08);
+            --accent: #16a34a;
+            --accent-dim: rgba(22, 163, 74, 0.10);
+            --accent-glow: rgba(22, 163, 74, 0.18);
+            --accent-light: #dcfce7;
+            --muted: #9aa5b8;
+            --text: #111827;
+            --text-dim: #6b7280;
+            --tag-bg: rgba(0, 0, 0, 0.04);
+            --shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.08), 0 8px 32px rgba(0, 0, 0, 0.08);
+            --header-bg: rgba(247, 248, 250, 0.88);
+            --hero-gradient: linear-gradient(135deg, #f0fdf4 0%, #f7f8fa 60%, #eff6ff 100%);
+            --prompt-bg: #f9fafb;
+            --card-num-color: #16a34a;
+            --card-num-bg: #dcfce7;
+            --card-num-border: rgba(22, 163, 74, 0.2);
+        }
+
+        [data-theme="dark"] {
+            --bg: #080c14;
+            --bg2: #0d1220;
+            --surface: #0f1623;
+            --surface2: #161e2e;
+            --border: rgba(255, 255, 255, 0.07);
+            --accent: #4ade80;
+            --accent-dim: rgba(74, 222, 128, 0.12);
+            --accent-glow: rgba(74, 222, 128, 0.25);
+            --accent-light: rgba(74, 222, 128, 0.15);
+            --muted: #4b5a72;
+            --text: #e2e8f0;
+            --text-dim: #7b8fa8;
+            --tag-bg: rgba(255, 255, 255, 0.05);
+            --shadow: none;
+            --shadow-hover: 0 4px 32px rgba(0, 0, 0, 0.4);
+            --header-bg: rgba(8, 12, 20, 0.88);
+            --hero-gradient: linear-gradient(135deg, #080c14 0%, #0d1525 100%);
+            --prompt-bg: rgba(0, 0, 0, 0.2);
+            --card-num-color: #4ade80;
+            --card-num-bg: rgba(74, 222, 128, 0.12);
+            --card-num-border: rgba(74, 222, 128, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'DM Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        [data-theme="dark"] body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 40% at 20% 10%, rgba(74, 222, 128, 0.05) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 60% at 80% 90%, rgba(56, 189, 248, 0.04) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ── STICKY HEADER ── */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--header-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: -0.02em;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--accent);
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .search-wrap {
+            position: relative;
+            flex: 1;
+            min-width: 180px;
+            max-width: 300px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 11px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: 14px;
+            pointer-events: none;
+        }
+
+        .search {
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 12px 8px 32px;
+            color: var(--text);
+            font-family: 'DM Mono', monospace;
+            font-size: 13px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        .search:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-dim);
+        }
+
+        .search::placeholder {
+            color: var(--muted);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 3px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            padding: 3px;
+            transition: background 0.3s;
+        }
+
+        .tab {
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-dim);
+            user-select: none;
+        }
+
+        .tab:hover {
+            color: var(--text);
+        }
+
+        .tab.active {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 2px 10px var(--accent-glow);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-dim);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .theme-btn:hover {
+            color: var(--text);
+            border-color: var(--accent);
+        }
+
+        .count {
+            font-family: 'Syne', sans-serif;
+            font-size: 12px;
+            color: var(--text-dim);
+            white-space: nowrap;
+        }
+
+        .count b {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ── HERO / SEO SECTION ── */
+        .hero {
+            background: var(--hero-gradient);
+            border-bottom: 1px solid var(--border);
+            padding: 52px 24px 44px;
+            text-align: center;
+            transition: background 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--accent-light);
+            border: 1px solid var(--card-num-border);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-family: 'Syne', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: clamp(1.7rem, 4vw, 2.5rem);
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            color: var(--text);
+            margin-bottom: 14px;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 14px;
+            color: var(--text-dim);
+            line-height: 1.8;
+            max-width: 560px;
+            margin: 0 auto 24px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--text);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 36px;
+            background: var(--border);
+            align-self: center;
+        }
+
+        /* ── MAIN ── */
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 28px 24px 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        #content {
+            display: grid;
+            gap: 12px;
+        }
+
+        /* ── CARD ── */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s, background 0.3s;
+            animation: fadeUp 0.3s ease both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:hover {
+            border-color: rgba(22, 163, 74, 0.28);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-1px);
+        }
+
+        [data-theme="dark"] .card:hover {
+            border-color: rgba(74, 222, 128, 0.2);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            padding: 15px 18px 15px;
+            cursor: pointer;
+        }
+
+        .card-num {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 11px;
+            color: var(--card-num-color);
+            background: var(--card-num-bg);
+            border: 1px solid var(--card-num-border);
+            border-radius: 5px;
+            padding: 2px 7px;
+            white-space: nowrap;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .card-title-wrap {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card-title {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 14.5px;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            line-height: 1.3;
+            margin-bottom: 5px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 11px;
+            color: var(--text-dim);
+            background: var(--tag-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 2px 7px;
+        }
+
+        .card-chevron {
+            color: var(--muted);
+            font-size: 13px;
+            transition: transform 0.25s;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .card.open .card-chevron {
+            transform: rotate(180deg);
+        }
+
+        .card-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card.open .card-body {
+            max-height: 900px;
+        }
+
+        .prompt-text {
+            font-size: 13px;
+            line-height: 1.8;
+            color: var(--text-dim);
+            padding: 14px 18px;
+            white-space: pre-wrap;
+            border-top: 1px solid var(--border);
+            background: var(--prompt-bg);
+            transition: background 0.3s;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 18px;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            border-radius: 7px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.18s;
+        }
+
+        .btn-copy {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn-copy:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 2px 12px var(--accent-glow);
+        }
+
+        .btn-copy.copied {
+            background: var(--accent-light);
+            color: var(--accent);
+            border: 1px solid var(--card-num-border);
+            filter: none;
+        }
+
+        .btn-collapse {
+            background: var(--surface2);
+            color: var(--text-dim);
+            border: 1px solid var(--border);
+        }
+
+        .btn-collapse:hover {
+            color: var(--text);
+        }
+
+        .char-count {
+            margin-left: auto;
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .empty {
+            text-align: center;
+            padding: 70px 20px;
+            color: var(--muted);
+        }
+
+        .empty-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .empty p {
+            font-family: 'Syne', sans-serif;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+
+        .card:nth-child(1) {
+            animation-delay: .02s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: .04s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: .06s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: .08s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: .10s;
+        }
+
+        .card:nth-child(6) {
+            animation-delay: .12s;
+        }
+
+        .card:nth-child(7) {
+            animation-delay: .14s;
+        }
+
+        .card:nth-child(8) {
+            animation-delay: .16s;
+        }
+
+        .card:nth-child(9) {
+            animation-delay: .18s;
+        }
+
+        .card:nth-child(10) {
+            animation-delay: .20s;
+        }
+
+        .card:nth-child(11) {
+            animation-delay: .22s;
+        }
+
+        .card:nth-child(12) {
+            animation-delay: .24s;
+        }
+
+        .card:nth-child(13) {
+            animation-delay: .26s;
+        }
+
+        @media (max-width: 580px) {
+
+            .count,
+            .stat-divider {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 18px;
+            }
+
+            .hero {
+                padding: 36px 20px 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── STICKY NAV ── -->
+    <header class="header">
+        <div class="header-inner">
+            <a class="logo" href="#">
+                <div class="logo-icon">✦</div>
+                Prompt<span>Hub</span>
+            </a>
+
+            <div class="header-right">
+                <div class="search-wrap">
+                    <span class="search-icon">⌕</span>
+                    <input class="search" placeholder="Search prompts..." oninput="filterPrompts(this.value)"
+                        aria-label="Search prompts">
+                </div>
+
+                <div class="tabs" role="tablist">
+                    <div class="tab active" role="tab" onclick="switchTab('chatgpt', this)">ChatGPT</div>
+                    <div class="tab" role="tab" onclick="switchTab('gemini', this)">Gemini</div>
+                </div>
+
+                <button class="theme-btn" onclick="toggleTheme()" title="Toggle theme"
+                    aria-label="Toggle light/dark theme">
+                    <span id="theme-icon">🌙</span>
+                </button>
+
+                <div class="count" id="count-label"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── SEO HERO ── -->
+    <section class="hero" aria-label="Page introduction">
+        <div class="hero-badge">✦ Free &amp; Copy-Ready</div>
+
+        <h1>The Best <em>AI Image Prompts</em><br>for ChatGPT &amp; Gemini</h1>
+
+        <p>
+            A curated library of high-quality prompts for AI image generation. Whether you're creating anime art,
+            cinematic film stills, vintage illustrations, or pixel game scenes — just copy, paste, and create.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-num" id="hero-count">13</span>
+                <span class="stat-label">Prompts</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num">2</span>
+                <span class="stat-label">AI Platforms</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Free to Use</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROMPT LIST ── -->
+    <main class="container">
+        <div id="content" role="list"></div>
+    </main>
+
+    <script>
+        const prompts = [
+            {
+                title: "Endangered Animal Infographic", tag: "Illustration · Research",
+                text: `Create a visually rich infographic about an endangered animal. Start by finding one online, research its habitat, diet, and unique traits. Present information through annotated visuals and structured callouts, not generic sections. Style it like a bold graphic illustration: a detailed, photorealistic central animal as the focal point, supported by diagrams, callouts, and concise text elements. Use clean backgrounds and a mix of photorealism with strong graphic elements (shapes, icons, color blocking) in a layered composition. Make it dense, tactile, and professionally authored.`
+            },
+
+            {
+                title: "Food Zine Creator", tag: "Design · Recipe",
+                text: `Create a 3-page color mixed media food zine for an international recipe. First, look online for recent trendy recipes, then choose one based on what you know about me. Include necessary step-by-step visuals, diagrams, and explainers. Include any health or environmental context of the dish.`
+            },
+
+            {
+                title: "Fashion Studio Portrait", tag: "Photography · Retouch",
+                text: `Transform this photo into an elevated fashion studio portrait. Choose a complementing-color background that enhances the subject's skin tone. Keep a tight head-and-shoulder composition with the subject centered and facing the camera straight with an optimistic expression. Apply directional lighting with subtle shadows. Preserve natural skin tones while making the image polished, minimal, and editorial—like a magazine photoshoot.`
+            },
+
+            {
+                title: "Blueprint Technical Poster", tag: "Design · Technical",
+                text: `Create a single-subject blueprint poster using only the main subject from the uploaded image. Render it as a clean white technical line drawing on a deep cobalt-blue blueprint background with a subtle grid. Use flat 2D schematic linework, orthographic contours, construction lines, measurement ticks, arrows, and minimal technical labels. The composition may also include 2-3 smaller inset studies or alternate views. Keep the layout simple and balanced with no shading, no 3D, no lighting, no extra objects.`
+            },
+
+            {
+                title: "Trending Anime Style", tag: "Illustration · Anime",
+                text: `Create a trending anime art style image from the uploaded subject. Use confident line-work with slight variation and minimal cel shading using flat shadow shapes. Use bright, saturated colors and clean graphic lighting. The style is defined by exaggerated, cartoonish character proportions featuring highly expressive, simplistic facial features that allow for immense emotional range, with highly varied stretched anatomy. Transform the environment into a slightly warped space with playful perspective distortion and simplified objects. Composition and tone should be energetic, lively, and comedic in a fully stylized, non-realistic world.`
+            },
+
+            {
+                title: "Retro Sunday Comic Strip", tag: "Illustration · Humor",
+                text: `Create a comic strip using the subject from the uploaded image. Style the comic strip in a bold Sunday funnies style with thick outlines, halftone textures, and bright 1980s colors. Pick one clear, exaggerated visual element from the photo and build the story around it, leading to a funny or unexpected payoff. Keep the dialogue short, natural, and easy to read, and make sure the joke lands clearly at a glance with no randomness or confusion.`
+            },
+
+            {
+                title: "Minimalist Logo Grid", tag: "Branding · Design",
+                text: `Transform this image into a grid of minimalist logos using the main subject as the core icon. Abstract and simplify the primary element into multiple unique vector-style logo marks. Each variation should reinterpret the same subject in different ways (geometric, line art, negative space, emblem, badge, monogram). Arrange 16-20 logos evenly on a light background. Keep designs clean, modern, with balanced spacing. Maintain consistency while exploring creative variations of the original subject as a cohesive branding logo collection.`
+            },
+
+            {
+                title: "Vintage Newspaper Portrait", tag: "Art · Vintage",
+                text: `Transform the person in the uploaded photo into a whimsical black-and-white vintage newspaper front page. Place them as the main portrait in the center, styled like an old engraved photograph. Surround them with bold, exaggerated headline text, narrow newspaper columns, and playful subheadings. Use high-contrast black ink on pure white background, subtle paper texture, and classic serif fonts. Add quirky, magical or humorous headlines to create a charming, slightly surreal tone. Keep the layout dense, editorial, and reminiscent of an old fantasy newspaper. Ensure the subject's face remains recognizable but stylized to match the printed newspaper aesthetic.`
+            },
+
+            {
+                title: "Botanical Scientific Atlas", tag: "Illustration · Scientific",
+                text: `Create a vintage botanical illustration poster that reinterprets the main subject as if it were studied in a 19th-century scientific atlas, using only visible details. Use fine ink linework, delicate cross-hatching, and a realistic yet idealized illustration style. Style illustration with bright colors from the uploaded image on a white background. Lay out a central primary illustration supported by smaller inset studies, guide lines, and diagram callouts that analyze form and structure with annotated text. Include understated labels and markers. Annotated text should be in plain English and easy to read.`
+            },
+
+            {
+                title: "Cinematic Film Stills", tag: "Photography · Cinematic",
+                text: `Transform the uploaded image into cinematic 3-frame sequential film stills (horizontal frames stacked vertically), full bleed edge-to-edge. Each frame should show a different moment from the same scene, with clear progression. Vary the composition, camera angle, and distances to create a sense of movement and storytelling. Use a cinematic, cooler-toned, high-contrast, deep-space blacks film with a natural color grade. Add subtle film grain, slight motion blur, and natural imperfections to emulate analog photography. Keep the composition candid and emotionally grounded, with a sense of movement and quiet storytelling. Overall aesthetic: cinematic, nostalgic, and organic, like raw film stills.`
+            },
+
+            {
+                title: "Personal Tarot Card", tag: "Art · Mystical",
+                text: `Create a tarot card based off of what you know about me in the classic Rider-Waite style. Style me in a hand-drawn figure using bold but imperfect black ink linework with wobble and variation, flat colors with no shading. Layer subtle tarot visual elements around the figure. Add paper texture and print feel.`
+            },
+
+            {
+                title: "Lighting Fixer", tag: "Photo Editing · Retouch",
+                text: `Improve the lighting while keeping everything else exactly the same. Do not change the person, pose, expression, background, or composition. Fix issues like back lighting, harsh shadows, underexposure or uneven lighting. Transform the original lighting into soft, natural, flattering light coming from slightly above eye level and facing the subject, so the face is evenly lit with realistic skin tones. Keep the result photorealistic and consistent with the original scene.`
+            },
+
+            {
+                title: "Pixel Art Game Scene", tag: "Gaming · Pixel Art",
+                text: `Using the subject(s) in the uploaded image as inspiration, create a single frame image from a story-driven 2D side-scrolling pixel art game. Translate the image's themes, colors, or subjects into the game world. The scene should capture a climactic, victorious moment in a non-violent, uplifting, or humorous way. Style should be detailed retro pixel art (16-bit), with clear silhouettes and a cohesive color palette. The image should be vertical and show the full game screen. Include a classic HUD at the top with a funny, original game title inspired by the image. The frame should feel like gameplay in progress, with a character, environment, and a clear sense of action or objective. All elements must be contained within the game screen.`
+            }
+        ];
+
+        let activeTab = 'chatgpt';
+        let filtered = [...prompts];
+        let isDark = false;
+
+        function toggleTheme() {
+            isDark = !isDark;
+            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : '');
+            document.getElementById('theme-icon').textContent = isDark ? '☀️' : '🌙';
+        }
+
+        function render() {
+            const container = document.getElementById('content');
+            const countEl = document.getElementById('count-label');
+            const heroCount = document.getElementById('hero-count');
+            container.innerHTML = '';
+
+            if (activeTab === 'gemini') {
+                container.innerHTML = `<div class="empty"><div class="empty-icon">🤖</div><p>No Gemini prompts yet — check back soon</p></div>`;
+                countEl.innerHTML = '';
+                return;
+            }
+
+            countEl.innerHTML = `<b>${filtered.length}</b> of ${prompts.length}`;
+            if (heroCount) heroCount.textContent = prompts.length;
+
+            if (!filtered.length) {
+                container.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div><p>No prompts match your search</p></div>`;
+                return;
+            }
+
+            filtered.forEach(p => {
+                const idx = prompts.indexOf(p) + 1;
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.setAttribute('role', 'listitem');
+                card.dataset.prompt = p.text;
+
+                card.innerHTML = `
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-num">#${String(idx).padStart(2, '0')}</div>
+        <div class="card-title-wrap">
+          <div class="card-title">${p.title}</div>
+          <span class="card-tag">${p.tag}</span>
+        </div>
+        <div class="card-chevron">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="prompt-text">${p.text}</div>
+        <div class="card-footer">
+          <button class="btn btn-copy" onclick="copyPrompt(this, event)">⎘ Copy Prompt</button>
+          <button class="btn btn-collapse" onclick="toggleCard(this.closest('.card').querySelector('.card-header'))">Collapse ↑</button>
+          <span class="char-count">${p.text.length} chars</span>
+        </div>
+      </div>`;
+
+                container.appendChild(card);
+            });
+        }
+
+        function toggleCard(header) {
+            header.closest('.card').classList.toggle('open');
+        }
+
+        function copyPrompt(btn, e) {
+            e.stopPropagation();
+            navigator.clipboard.writeText(btn.closest('.card').dataset.prompt).then(() => {
+                btn.classList.add('copied');
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '⎘ Copy Prompt'; }, 2000);
+            });
+        }
+
+        function switchTab(tab, el) {
+            activeTab = tab;
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+            filtered = [...prompts];
+            document.querySelector('.search').value = '';
+            render();
+        }
+
+        function filterPrompts(q) {
+            if (activeTab !== 'chatgpt') return;
+            const s = q.toLowerCase();
+            filtered = prompts.filter(p => p.title.toLowerCase().includes(s) || p.text.toLowerCase().includes(s) || p.tag.toLowerCase().includes(s));
+            render();
+        }
+
+        render();
+    </script>
+</body>
+
+</html>
