@@ -549,6 +549,25 @@
             color: var(--text-dim);
         }
 
+        .page-footer {
+            max-width: 960px;
+            margin: auto;
+            padding: 18px 24px 34px;
+            color: var(--text-dim);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .page-footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .page-footer a:hover {
+            text-decoration: underline;
+        }
+
         .card:nth-child(1) {
             animation-delay: .02s;
         }
@@ -624,7 +643,7 @@
     <!-- ── STICKY NAV ── -->
     <header class="header">
         <div class="header-inner">
-            <a class="logo" href="#">
+            <a class="logo" href="/">
                 <div class="logo-icon">✦</div>
                 Prompt<span>Hub</span>
             </a>
@@ -684,6 +703,12 @@
     <main class="container">
         <div id="content" role="list"></div>
     </main>
+
+    <footer class="page-footer">
+        <p>
+            <a href="/">← Back to Home</a>
+        </p>
+    </footer>
 
     <script>
         const prompts = [
