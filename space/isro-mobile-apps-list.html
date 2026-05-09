@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ISRO & DOS Mobile Apps for Public Use - Veerexa Space</title>
+    <meta name="description" content="Official list of mobile apps developed by ISRO and the Department of Space (DOS) for public utilities, including Solar Calculator, NavIC navigation, and Nabhmitra maritime safety.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "surface-container": "#f1f5f9",
+                        "inverse-surface": "#313033",
+                        "on-secondary-fixed-variant": "#004e60",
+                        "primary": "#0ea5e9",
+                        "surface-container-high": "#e2e8f0",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#001f2a",
+                        "outline": "#79747e",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#334155",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f4eff4",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#cac4d0",
+                        "surface-tint": "#0ea5e9",
+                        "secondary": "#7c3aed",
+                        "primary-container": "#cff4ff",
+                        "tertiary-fixed": "#ffd8e4",
+                        "on-error": "#ffffff",
+                        "background": "#f8fafc",
+                        "surface": "#ffffff",
+                        "surface-variant": "#e2e8f0",
+                        "primary-fixed": "#cff4ff",
+                        "secondary-container": "#e8def8",
+                        "surface-bright": "#f8fafc",
+                        "on-secondary-fixed": "#1d192b",
+                        "tertiary": "#7d5260",
+                        "on-tertiary-fixed-variant": "#31111d",
+                        "on-background": "#0f172a",
+                        "on-primary-container": "#001f2a",
+                        "primary-fixed-dim": "#82d3f9",
+                        "surface-container-low": "#f8fafc",
+                        "tertiary-container": "#ffd8e4",
+                        "secondary-fixed-dim": "#cbc2db",
+                        "on-primary-fixed-variant": "#004b68",
+                        "inverse-primary": "#82d3f9",
+                        "on-surface": "#1e293b",
+                        "on-tertiary-container": "#31111d",
+                        "on-secondary-container": "#1d192b",
+                        "surface-container-highest": "#cbd5e1",
+                        "surface-dim": "#dcd8dd",
+                        "on-error-container": "#410002",
+                        "secondary-fixed": "#e8def8",
+                        "tertiary-fixed-dim": "#efb8c8",
+                        "on-tertiary-fixed": "#31111d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "component-gap": "16px",
+                        "gutter": "24px",
+                        "container-padding-desktop": "40px",
+                        "container-padding-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Space Mono"],
+                        "display-lg": ["Inter"],
+                        "telemetry-md": ["Space Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "telemetry-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .scanlines {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.02));
+            background-size: 100% 4px;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Solar Calculator App developed by ISRO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Solar Calculator App developed by ISRO/SAC provides monthly and yearly Global Horizontal Irradiance (GHI), Direct Normal Irradiance (DNI), and Diffused Horizontal Irradiance (DHI) using INSAT satellite data. It helps estimate solar energy potential and the optimal tilt angle for solar panels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What navigation system powers the MapmyindiaNavIC App?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The MapmyindiaNavIC App is powered by NavIC (Navigation with Indian Constellation), India's self-reliant regional satellite navigation system developed by ISRO, providing extremely precise positioning and navigation services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Nabhmitra App help fishermen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Developed for marine safety, Nabhmitra is a satellite-based communication device and app that provides two-way messaging, real-time weather advisories, cyclone alerts, and distress signaling for fishermen at deep sea."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the purpose of the Sagarmitra App?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Sagarmitra App provides ocean advisory services, including Potential Fishing Zone (PFZ) forecasts, wave height, ocean current warnings, and wind speed updates derived from Indian remote sensing satellites to assist maritime operations."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-[#f8fafc] text-[#334155] min-h-screen relative flex flex-col font-body-md overflow-x-hidden">
+<!-- Background decorative layers -->
+<div class="fixed inset-0 z-0 bg-[#f8fafc] pointer-events-none"></div>
+<div class="fixed inset-0 z-[1] bg-[radial-gradient(ellipse_at_top_right,_rgba(14,165,233,0.08)_0%,_transparent_50%)] pointer-events-none"></div>
+<div class="fixed inset-0 z-[2] scanlines pointer-events-none mix-blend-overlay"></div>
+
+<!-- TopAppBar Shared Component -->
+<header class="docked full-width top-0 sticky z-50 border-b border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.05)] bg-[#ffffff]/60 backdrop-blur-xl flex justify-between items-center px-gutter py-unit h-16 w-full">
+    <div class="flex items-center gap-component-gap">
+        <a href="index.html" class="w-8 h-8 rounded-full overflow-hidden border border-outline/30 scale-95 active:scale-90 transition-transform flex items-center justify-center font-bold bg-white/50 hover:bg-white shadow-sm">
+            <span class="material-symbols-outlined" style="font-size: 20px;">arrow_back</span>
+        </a>
+        <span class="font-label-caps text-label-caps tracking-[0.2em] text-secondary">VEEREXA</span>
+    </div>
+    <div class="font-label-caps text-label-caps tracking-[0.1em] text-on-surface-variant hidden md:block">
+        ISRO UTILITIES
+    </div>
+    <div class="w-8 h-8 rounded-full overflow-hidden border border-outline/30">
+        <img alt="Astronaut profile image" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1AucJvOn5hpwkILeE7_hvHaqLiWaViz0sX5jDgF6mV0rIipvUwlUBAb80ExPYIXX385B38mZplLttI2nGzIyChi41-iVWtl25z4nmIEfl5vYyp0Ji2St10z-gLwjg-oaJkqaSILJcaS4NEVpFIKBhX-JB2LaleiAczOsaaKWSrbmDKNw5S9V1AMgZ-13NDxn0sh9eeo316gNoBqDCfC49zOt51jqqdrmSs80GtpC6pxZUPGBUQ4_HQCy_RgXqU9Kymos748Xl9do"/>
+    </div>
+</header>
+
+<!-- Main Canvas -->
+<main class="relative z-10 flex-1 w-full max-w-5xl mx-auto px-container-padding-mobile md:px-container-padding-desktop pt-8 pb-32 flex flex-col gap-12">
+    <!-- Page Header -->
+    <div>
+        <span class="font-label-caps text-[10px] text-[#7c3aed] uppercase tracking-widest bg-[#7c3aed]/5 px-3 py-1 rounded-full border border-[#7c3aed]/10">Software Suite</span>
+        <h1 class="font-display-lg text-4xl md:text-5xl font-black text-slate-900 mt-3 mb-2">Official Mobile Apps</h1>
+        <p class="font-body-md text-slate-500 max-w-2xl">Discover civilian, maritime, mapping, and scientific mobile software developed by ISRO and the Department of Space (DOS) for public welfare.</p>
+    </div>
+
+    <!-- Category 1: Developed by ISRO -->
+    <section class="flex flex-col gap-6">
+        <div class="flex items-center gap-3 border-b border-slate-200/60 pb-3">
+            <span class="material-symbols-outlined text-sky-500" style="font-size: 28px;">rocket_launch</span>
+            <h2 class="text-2xl font-display font-black text-slate-900">Developed by ISRO</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- App 1: Solar Calculator -->
+            <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex flex-col justify-between group hover:border-[#0ea5e9]/30 hover:shadow-md transition-all">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-2xl font-bold mb-4">☀️</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Solar Calculator App</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-4">Derived from high-fidelity INSAT meteorological payloads, this tool provides monthly and yearly Global Horizontal Irradiance (GHI), DNI, and Diffused Irradiance values along with Sun path modeling, terrain shadowing profile analysis, and custom tilt calculators.</p>
+                </div>
+                <a href="https://www.sac.gov.in/Vyom/index.jsp" target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-slate-50 hover:bg-[#0ea5e9]/10 hover:text-[#0ea5e9] text-slate-700 text-center py-2.5 rounded-xl font-bold text-xs transition-colors border border-slate-100">
+                    Download App ↗
+                </a>
+            </div>
+
+            <!-- App 2: Universal Data Collection -->
+            <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex flex-col justify-between group hover:border-[#0ea5e9]/30 hover:shadow-md transition-all">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-500 flex items-center justify-center text-2xl font-bold mb-4">📊</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Universal Data Collection App</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-4">Integrated with ISRO's Bhuvan geoportal, this specialized field-mapping utility empowers users to collect coordinates, capture localized geographical parameters, and link ground-truth photos directly to a centralized geographic database.</p>
+                </div>
+                <a href="https://bhuvan.nrsc.gov.in/" target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-slate-50 hover:bg-[#0ea5e9]/10 hover:text-[#0ea5e9] text-slate-700 text-center py-2.5 rounded-xl font-bold text-xs transition-colors border border-slate-100">
+                    Download App ↗
+                </a>
+            </div>
+
+            <!-- App 3: MapmyIndia NavIC -->
+            <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex flex-col justify-between group hover:border-[#0ea5e9]/30 hover:shadow-md transition-all">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-500 flex items-center justify-center text-2xl font-bold mb-4">🗺️</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">MapmyIndia NavIC App</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-4">Collaboratively engineered to utilize NavIC (Navigation with Indian Constellation) regional positioning satellites. Delivers highly accurate navigation, turn-by-turn road assist, regional mapping, and localized safety alerts.</p>
+                </div>
+                <a href="https://www.mapmyindia.com/" target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-slate-50 hover:bg-[#0ea5e9]/10 hover:text-[#0ea5e9] text-slate-700 text-center py-2.5 rounded-xl font-bold text-xs transition-colors border border-slate-100">
+                    Download App ↗
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category 2: Developed by DOS -->
+    <section class="flex flex-col gap-6">
+        <div class="flex items-center gap-3 border-b border-slate-200/60 pb-3">
+            <span class="material-symbols-outlined text-purple-500" style="font-size: 28px;">lan</span>
+            <h2 class="text-2xl font-display font-black text-slate-900">Developed by Department of Space (DOS)</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- App 4: Nabhmitra -->
+            <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex flex-col justify-between group hover:border-[#7c3aed]/30 hover:shadow-md transition-all">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center text-2xl font-bold mb-4">⚓</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Nabhmitra App</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-4">A critical safety application developed for fishermen on deep-sea expeditions. Enables continuous two-way messaging, emergency SOS signaling to maritime control rooms, weather updates, and cyclone coordinates.</p>
+                </div>
+                <a href="https://www.isro.gov.in" target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-slate-50 hover:bg-[#7c3aed]/10 hover:text-[#7c3aed] text-slate-700 text-center py-2.5 rounded-xl font-bold text-xs transition-colors border border-slate-100">
+                    Download App ↗
+                </a>
+            </div>
+
+            <!-- App 5: Sagarmitra -->
+            <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex flex-col justify-between group hover:border-[#7c3aed]/30 hover:shadow-md transition-all">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-500 flex items-center justify-center text-2xl font-bold mb-4">🌊</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Sagarmitra App</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-4">Ocean advisory portal providing fishermen and shipping vessels real-time Potential Fishing Zone (PFZ) map projections, wave heights, tidal warnings, ocean surface temperature graphs, and navigational aids.</p>
+                </div>
+                <a href="https://incois.gov.in/" target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-slate-50 hover:bg-[#7c3aed]/10 hover:text-[#7c3aed] text-slate-700 text-center py-2.5 rounded-xl font-bold text-xs transition-colors border border-slate-100">
+                    Download App ↗
+                </a>
+            </div>
+
+            <!-- App 6: SatSleeve -->
+            <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex flex-col justify-between group hover:border-[#7c3aed]/30 hover:shadow-md transition-all">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-2xl font-bold mb-4">📡</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">SatSleeve App</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-4">Designed for emergency rescue and remote tracking missions. Pairs mobile devices with dedicated satellite transceivers, giving safety coordinators active connectivity in blackouts, rugged terrain, and cellular deadzones.</p>
+                </div>
+                <a href="https://www.isro.gov.in" target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-slate-50 hover:bg-[#7c3aed]/10 hover:text-[#7c3aed] text-slate-700 text-center py-2.5 rounded-xl font-bold text-xs transition-colors border border-slate-100">
+                    Download App ↗
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion FAQ Section -->
+    <section class="mt-12 pt-10 border-t border-slate-200">
+        <h3 class="text-2xl font-display font-black text-slate-900 mb-8">Frequently Asked Questions</h3>
+        <div class="faq-accordion space-y-4">
+            <div class="faq-item bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+                <details class="group">
+                    <summary class="faq-question font-bold text-slate-800 cursor-pointer list-none flex justify-between items-center">
+                        What is the Solar Calculator App developed by ISRO?
+                        <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl text-sky-500">+</span>
+                    </summary>
+                    <div class="faq-answer mt-4 text-slate-500 leading-relaxed text-sm">
+                        The Solar Calculator App developed by ISRO/SAC provides monthly and yearly Global Horizontal Irradiance (GHI), Direct Normal Irradiance (DNI), and Diffused Horizontal Irradiance (DHI) using INSAT satellite data. It helps estimate solar energy potential and the optimal tilt angle for solar panels.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-item bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+                <details class="group">
+                    <summary class="faq-question font-bold text-slate-800 cursor-pointer list-none flex justify-between items-center">
+                        What navigation system powers the MapmyindiaNavIC App?
+                        <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl text-sky-500">+</span>
+                    </summary>
+                    <div class="faq-answer mt-4 text-slate-500 leading-relaxed text-sm">
+                        The MapmyindiaNavIC App is powered by NavIC (Navigation with Indian Constellation), India's self-reliant regional satellite navigation system developed by ISRO, providing extremely precise positioning and navigation services.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-item bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+                <details class="group">
+                    <summary class="faq-question font-bold text-slate-800 cursor-pointer list-none flex justify-between items-center">
+                        How does the Nabhmitra App help fishermen?
+                        <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl text-sky-500">+</span>
+                    </summary>
+                    <div class="faq-answer mt-4 text-slate-500 leading-relaxed text-sm">
+                        Developed for marine safety, Nabhmitra is a satellite-based communication device and app that provides two-way messaging, real-time weather advisories, cyclone alerts, and distress signaling for fishermen at deep sea.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-item bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+                <details class="group">
+                    <summary class="faq-question font-bold text-slate-800 cursor-pointer list-none flex justify-between items-center">
+                        What is the purpose of the Sagarmitra App?
+                        <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl text-sky-500">+</span>
+                    </summary>
+                    <div class="faq-answer mt-4 text-slate-500 leading-relaxed text-sm">
+                        The Sagarmitra App provides ocean advisory services, including Potential Fishing Zone (PFZ) forecasts, wave height, ocean current warnings, and wind speed updates derived from Indian remote sensing satellites to assist maritime operations.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-white/80 backdrop-blur-2xl border-t border-slate-200/50 shadow-[0_-4px_24px_rgba(0,0,0,0.05)] md:hidden">
+    <a href="isro-space-missions-india.html" class="flex flex-col items-center justify-center text-slate-400 hover:text-[#7c3aed] transition-colors">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">rocket_launch</span>
+        <span class="font-label-caps text-[10px] uppercase tracking-widest mt-1">ISRO</span>
+    </a>
+    <a href="index.html" class="flex flex-col items-center justify-center text-slate-800 relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-[#7c3aed] after:rounded-full transform scale-110 duration-200">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+        <span class="font-label-caps text-[10px] uppercase tracking-widest mt-1 font-bold">Space</span>
+    </a>
+    <a href="../defense/index.html" class="flex flex-col items-center justify-center text-slate-400 hover:text-[#7c3aed] transition-colors">
+        <span class="material-symbols-outlined">shield</span>
+        <span class="font-label-caps text-[10px] uppercase tracking-widest mt-1">Defense</span>
+    </a>
+</nav>
+</body>
+</html>
