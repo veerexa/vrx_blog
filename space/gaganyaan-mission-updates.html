@@ -198,7 +198,7 @@
 </div>
 <div class="glass-panel p-6 rounded-lg text-center backdrop-blur-md bg-surface-container/80 border border-white/5 shadow-2xl">
 <div class="font-label-caps text-label-caps text-on-surface-variant mb-2">T-MINUS</div>
-<div class="font-telemetry-md text-3xl font-bold text-secondary mb-4 tracking-widest">
+<div id="countdown-timer" class="font-telemetry-md text-3xl font-bold text-secondary mb-4 tracking-widest">
                                 48 : 12 : 34 : 09
                             </div>
 <button class="w-full bg-gradient-to-r from-[#14d1ff] to-[#a6e6ff] text-surface-container-lowest font-label-caps text-label-caps py-3 px-6 rounded hover:shadow-[0_0_15px_rgba(20,209,255,0.5)] transition-shadow flex items-center justify-center gap-2 group">
@@ -213,7 +213,7 @@
 <div class="glass-panel p-6 rounded-xl flex flex-col">
 <span class="material-symbols-outlined text-on-surface-variant mb-4">calendar_month</span>
 <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">LAUNCH DATE</div>
-<div class="font-telemetry-md text-telemetry-md text-primary-fixed">AUG 15, 2025</div>
+<div class="font-telemetry-md text-telemetry-md text-primary-fixed">DEC 18, 2026</div>
 </div>
 <div class="glass-panel p-6 rounded-xl flex flex-col">
 <span class="material-symbols-outlined text-on-surface-variant mb-4">public</span>
@@ -358,4 +358,30 @@
             <span class="font-label-caps text-[10px] uppercase tracking-widest mt-1">Defense</span>
         </a>
     </nav>
+    <script>
+        const targetDate = new Date("December 18, 2026 12:00:00").getTime();
+        const timerElement = document.getElementById("countdown-timer");
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                timerElement.innerText = "00 : 00 : 00 : 00";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            const format = (num) => String(num).padStart(2, '0');
+
+            timerElement.innerText = `${format(days)} : ${format(hours)} : ${format(minutes)} : ${format(seconds)}`;
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 </body></html>
