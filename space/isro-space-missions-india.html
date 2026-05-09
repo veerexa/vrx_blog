@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ISRO Hub - Veerexa Space</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "surface-container": "#f1f5f9",
+                        "inverse-surface": "#313033",
+                        "on-secondary-fixed-variant": "#004e60",
+                        "primary": "#0ea5e9",
+                        "surface-container-high": "#e2e8f0",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#001f2a",
+                        "outline": "#79747e",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#334155",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f4eff4",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#cac4d0",
+                        "surface-tint": "#0ea5e9",
+                        "secondary": "#7c3aed",
+                        "primary-container": "#cff4ff",
+                        "tertiary-fixed": "#ffd8e4",
+                        "on-error": "#ffffff",
+                        "background": "#f8fafc",
+                        "surface": "#ffffff",
+                        "surface-variant": "#e2e8f0",
+                        "primary-fixed": "#cff4ff",
+                        "secondary-container": "#e8def8",
+                        "surface-bright": "#f8fafc",
+                        "on-secondary-fixed": "#1d192b",
+                        "tertiary": "#7d5260",
+                        "on-tertiary-fixed-variant": "#31111d",
+                        "on-background": "#0f172a",
+                        "on-primary-container": "#001f2a",
+                        "primary-fixed-dim": "#82d3f9",
+                        "surface-container-low": "#f8fafc",
+                        "tertiary-container": "#ffd8e4",
+                        "secondary-fixed-dim": "#cbc2db",
+                        "on-primary-fixed-variant": "#004b68",
+                        "inverse-primary": "#82d3f9",
+                        "on-surface": "#1e293b",
+                        "on-tertiary-container": "#31111d",
+                        "on-secondary-container": "#1d192b",
+                        "surface-container-highest": "#cbd5e1",
+                        "surface-dim": "#dcd8dd",
+                        "on-error-container": "#410002",
+                        "secondary-fixed": "#e8def8",
+                        "tertiary-fixed-dim": "#efb8c8",
+                        "on-tertiary-fixed": "#31111d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "component-gap": "16px",
+                        "gutter": "24px",
+                        "container-padding-desktop": "40px",
+                        "container-padding-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Space Mono"],
+                        "display-lg": ["Inter"],
+                        "telemetry-md": ["Space Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "telemetry-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            overflow-x: hidden;
+            min-height: max(884px, 100dvh);
+        }
+        .scanlines::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,0.02) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 40;
+        }
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 50% 0%, rgba(20, 209, 255, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(189, 19, 255, 0.05) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .inner-glow {
+            box-shadow: inset 0 0 20px rgba(166, 230, 255, 0.1);
+        }
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .pulse-dot {
+            animation: pulse 2s infinite ease-in-out;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the main objective of ISRO Hub - Veerexa Space?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The primary objective of ISRO Hub - Veerexa Space is to advance our understanding of space exploration and contribute to India's growing capabilities in aerospace technology."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ISRO Hub - Veerexa Space impact future space missions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ISRO Hub - Veerexa Space sets a critical foundation for upcoming space missions by validating new technologies and operational procedures for ISRO and its partners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the key technological advancements in ISRO Hub - Veerexa Space?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Key advancements include improved propulsion systems, autonomous navigation, and cost-effective engineering methodologies that define ISRO Hub - Veerexa Space."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is ISRO Hub - Veerexa Space important for India's space program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ISRO Hub - Veerexa Space showcases India's self-reliance in space technology and strengthens its position in the global space economy."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="font-body-md text-body-md pb-32">
+    <!-- Ambient Background Layer -->
+    <div class="ambient-bg"></div>
+    <div class="scanlines"></div>
+
+    <!-- TopAppBar -->
+    <header class="docked full-width top-0 sticky z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.5)] flex justify-between items-center px-gutter py-unit h-16 w-full">
+        <a href="index.html" class="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-surface-container flex items-center justify-center font-bold">
+            <span class="material-symbols-outlined" style="font-size: 20px;">arrow_back</span>
+        </a>
+        <div class="font-label-caps text-label-caps tracking-[0.2em] text-secondary">
+            ISRO HUB
+        </div>
+        <button onclick="alert('Search functionality coming soon!')" class="text-primary hover:text-secondary transition-colors duration-300 scale-95 active:scale-90 flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10">
+            <span class="material-symbols-outlined" style="font-size: 20px;">search</span>
+        </button>
+    </header>
+
+    <main class="relative z-10 w-full max-w-7xl mx-auto flex flex-col gap-12 mt-8">
+        
+        <section class="px-gutter pt-4">
+            <h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-display-lg md:text-display-lg text-on-surface">
+                Welcome to <span class="text-secondary">ISRO Hub</span>
+            </h1>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-lg">
+                Tracking India's space missions, satellite launches, and cosmic milestones.
+            </p>
+        </section>
+
+        <!-- Featured Card: Gaganyaan -->
+        <section class="px-gutter">
+            <a href="gaganyaan-mission-updates.html" class="block relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.8)] inner-glow isolate group cursor-pointer">
+                <div class="absolute inset-0 z-0 bg-surface-container">
+                    <img alt="Gaganyaan Launchpad" class="w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyrDCXgZfvzmRCOkFNaV12a4RbmknGUN3xMXbV6z4BUaHCWUN4gcibEJY9RxXexFwYsjbzGquqgnvUapnwZ2-QAcB-bzTVZAvZvDM7UQQGCIRj9zB7KiDGqgs1gjoYaqYgBtbeE534BSwJWzeG9MFgJBQ08NY_iiELyDabkYrtTUiex9vE_cJWD1IM_PxK_dQr5PN6KbQvvfuOVrUKuGy5GKUK0Fo4SsxmcIJIWImXXZ4drxx-QcgOsbRpT3huj6AEdKkEALgDMag"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+                </div>
+                <div class="relative z-10 p-6 md:p-8 flex flex-col justify-end min-h-[320px] md:min-h-[400px]">
+                    <div class="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 w-max">
+                        <span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_theme('colors.secondary')] pulse-dot"></span>
+                        <span class="font-label-caps text-label-caps text-secondary uppercase">Human Spaceflight</span>
+                    </div>
+                    <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-2">
+                        Gaganyaan Mission Updates
+                    </h2>
+                    <p class="font-body-md text-on-surface-variant max-w-2xl mb-4">Tracking India's first manned spaceflight progress, including crew escape system tests and astronaut training.</p>
+                    <div class="mt-4 flex flex-wrap gap-4 items-center justify-between">
+                        <div class="flex gap-4">
+                            <div class="bg-surface-container/80 backdrop-blur-md border border-white/10 rounded-lg p-3 min-w-[64px] text-center">
+                                <div class="font-telemetry-md text-telemetry-md text-secondary text-xl">14</div>
+                                <div class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-1">Days</div>
+                            </div>
+                            <div class="bg-surface-container/80 backdrop-blur-md border border-white/10 rounded-lg p-3 min-w-[64px] text-center">
+                                <div class="font-telemetry-md text-telemetry-md text-secondary text-xl">08</div>
+                                <div class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-1">Hrs</div>
+                            </div>
+                        </div>
+                        <button class="bg-gradient-to-r from-secondary-container to-tertiary-container hover:from-secondary hover:to-tertiary-fixed text-on-secondary-container font-label-caps text-label-caps uppercase px-6 py-3 rounded-full shadow-[0_0_20px_rgba(20,209,255,0.3)] hover:shadow-[0_0_30px_rgba(20,209,255,0.6)] transition-all duration-300">
+                            Track Progress
+                        </button>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Stats Grid -->
+        <section class="px-gutter">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-component-gap">
+                <div class="bg-surface-container/40 backdrop-blur-xl border border-white/5 rounded-xl p-5 flex flex-col inner-glow hover:border-secondary/30 transition-colors">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">ISRO Launches</span>
+                    <div class="flex items-center gap-2">
+                        <span class="font-telemetry-md text-telemetry-md text-2xl text-on-surface">124+</span>
+                    </div>
+                </div>
+                <div class="bg-surface-container/40 backdrop-blur-xl border border-white/5 rounded-xl p-5 flex flex-col inner-glow hover:border-secondary/30 transition-colors">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Satellites</span>
+                    <div class="flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-secondary pulse-dot"></span>
+                        <span class="font-telemetry-md text-telemetry-md text-2xl text-secondary">432+</span>
+                    </div>
+                </div>
+                <div class="bg-surface-container/40 backdrop-blur-xl border border-white/5 rounded-xl p-5 flex flex-col inner-glow hover:border-secondary/30 transition-colors">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Upcoming</span>
+                    <div class="flex items-center gap-2">
+                        <span class="font-telemetry-md text-telemetry-md text-2xl text-on-surface">5</span>
+                    </div>
+                </div>
+                <div class="bg-surface-container/40 backdrop-blur-xl border border-white/5 rounded-xl p-5 flex flex-col inner-glow hover:border-secondary/30 transition-colors">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Foreign Sats</span>
+                    <div class="flex items-center gap-2">
+                        <span class="font-telemetry-md text-telemetry-md text-2xl text-[#14d1ff]">431</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Space Blog Topics -->
+        <section class="w-full">
+            <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface px-gutter mb-6 flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary">explore</span>
+                Mission Logs
+            </h3>
+            <div class="flex overflow-x-auto gap-4 px-gutter pb-6 snap-x no-scrollbar">
+                
+                <a href="isro-launches-2026-schedule.html" class="snap-start shrink-0 w-72 md:w-80 bg-surface-container/60 backdrop-blur-xl border border-white/5 rounded-xl overflow-hidden flex flex-col group hover:border-secondary/30 transition-colors cursor-pointer">
+                    <div class="p-5 flex flex-col gap-2 flex-grow">
+                        <span class="font-label-caps text-[10px] text-secondary uppercase">Launch Pad</span>
+                        <h4 class="font-body-md text-body-md font-semibold text-on-surface line-clamp-2">ISRO Launches 2026 Schedule</h4>
+                        <p class="font-telemetry-md text-[12px] text-on-surface-variant mt-2 line-clamp-3">Upcoming PSLV and GSLV mission schedules, commercial primary payloads, and satellite deployment alerts.</p>
+                        <span class="text-secondary text-sm mt-auto group-hover:translate-x-1 transition-transform">View Schedule →</span>
+                    </div>
+                </a>
+
+                <a href="india-vs-nasa-space-missions.html" class="snap-start shrink-0 w-72 md:w-80 bg-surface-container/60 backdrop-blur-xl border border-white/5 rounded-xl overflow-hidden flex flex-col group hover:border-secondary/30 transition-colors cursor-pointer">
+                    <div class="p-5 flex flex-col gap-2 flex-grow">
+                        <span class="font-label-caps text-[10px] text-secondary uppercase">Comparison</span>
+                        <h4 class="font-body-md text-body-md font-semibold text-on-surface line-clamp-2">India vs NASA Missions</h4>
+                        <p class="font-telemetry-md text-[12px] text-on-surface-variant mt-2 line-clamp-3">In-depth technical benchmarks between ISRO and NASA missions, cost efficiency analysis, and collaborative goals.</p>
+                        <span class="text-secondary text-sm mt-auto group-hover:translate-x-1 transition-transform">See Comparison →</span>
+                    </div>
+                </a>
+
+                <a href="mars-missions.html" class="snap-start shrink-0 w-72 md:w-80 bg-surface-container/60 backdrop-blur-xl border border-white/5 rounded-xl overflow-hidden flex flex-col group hover:border-secondary/30 transition-colors cursor-pointer">
+                    <div class="p-5 flex flex-col gap-2 flex-grow">
+                        <span class="font-label-caps text-[10px] text-secondary uppercase">Martian Exploration</span>
+                        <h4 class="font-body-md text-body-md font-semibold text-on-surface line-clamp-2">Mangalyaan & Beyond</h4>
+                        <p class="font-telemetry-md text-[12px] text-on-surface-variant mt-2 line-clamp-3">Discover how ISRO's MOM reached Mars on its first attempt, and future planetary goals.</p>
+                        <span class="text-secondary text-sm mt-auto group-hover:translate-x-1 transition-transform">Explore Mars Data →</span>
+                    </div>
+                </a>
+
+                <a href="future-missions.html" class="snap-start shrink-0 w-72 md:w-80 bg-surface-container/60 backdrop-blur-xl border border-white/5 rounded-xl overflow-hidden flex flex-col group hover:border-secondary/30 transition-colors cursor-pointer">
+                    <div class="p-5 flex flex-col gap-2 flex-grow">
+                        <span class="font-label-caps text-[10px] text-secondary uppercase">Upcoming Targets</span>
+                        <h4 class="font-body-md text-body-md font-semibold text-on-surface line-clamp-2">Gaganyaan, Shukrayaan</h4>
+                        <p class="font-telemetry-md text-[12px] text-on-surface-variant mt-2 line-clamp-3">Learn about ISRO's human spaceflight, the Venus orbiter, and the Bharatiya Antariksha Station.</p>
+                        <span class="text-secondary text-sm mt-auto group-hover:translate-x-1 transition-transform">View Future Plans →</span>
+                    </div>
+                </a>
+
+                <a href="indian-private-space-companies.html" class="snap-start shrink-0 w-72 md:w-80 bg-surface-container/60 backdrop-blur-xl border border-white/5 rounded-xl overflow-hidden flex flex-col group hover:border-secondary/30 transition-colors cursor-pointer">
+                    <div class="p-5 flex flex-col gap-2 flex-grow">
+                        <span class="font-label-caps text-[10px] text-secondary uppercase">Space Economy</span>
+                        <h4 class="font-body-md text-body-md font-semibold text-on-surface line-clamp-2">Indian Private Space Tech</h4>
+                        <p class="font-telemetry-md text-[12px] text-on-surface-variant mt-2 line-clamp-3">Startups like Skyroot, Agnikul, and Pixxel are revolutionizing India's aerospace sector under IN-SPACe.</p>
+                        <span class="text-secondary text-sm mt-auto group-hover:translate-x-1 transition-transform">Discover Startups →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Mission of the Day Spotlight: Chandrayaan -->
+        <section class="px-gutter pb-12">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+                    Mission Spotlight
+                </h3>
+            </div>
+            <a href="chandrayaan-3-success.html" class="block w-full bg-surface-container/30 backdrop-blur-xl border border-white/10 rounded-2xl p-2 sm:p-4 hover:border-secondary/30 transition-colors cursor-pointer">
+                <div class="relative w-full h-64 md:h-80 rounded-xl overflow-hidden group">
+                    <img alt="Lunar Rover Surface" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Af40tzfCwlhxIX19R8gVHNmVYih3cDX4hAFkz3lnoet4hnKx7_o3EDPV2e5ol-urANGLeBsDwthBqsHhJqpwJ4Q7XfsNGivs9V-4HtZXX-Sko7zte53jxDvC58ntUdQIwJzr8R8kXUnUEdGCVCcPT63qoPZZZvKmlCWCLTUx3Lys02uLN_cVG5s-FRzD5ANizi9uISnWiZPznraDfJBxWSyFY9ktM59o6jxMBrZF3LmiGdknw7pteOA20l_gaHlKP5KN7Qdb-8o"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent flex flex-col justify-end p-6">
+                        <span class="font-label-caps text-label-caps text-secondary uppercase mb-2">Chandrayaan-3</span>
+                        <p class="font-body-md text-body-md text-on-surface max-w-2xl">
+                            Ongoing surface operations near the lunar south pole. Telemetry indicates stable power levels and continuous data stream acquisition. Real-time milestones from the lunar landing.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </section>
+        
+        <!-- ISRO Satellites List -->
+        <section class="px-gutter pb-24">
+            <a href="isro-satellites-list.html" class="block w-full bg-gradient-to-r from-surface-container to-surface-container-high border border-white/10 rounded-2xl p-6 hover:border-secondary/50 transition-colors cursor-pointer group">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="font-label-caps text-[10px] text-tertiary uppercase tracking-widest">Database</span>
+                        <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mt-1">ISRO Satellites Directory</h3>
+                        <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">Comprehensive list of all ISRO satellites categorized by operation and mission parameters.</p>
+                    </div>
+                    <span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-secondary transition-colors hidden md:block">arrow_forward</span>
+                </div>
+            </a>
+        </section>
+
+            <section class="mt-20 pt-10 border-t border-slate-200">
+          <h3 class="text-2xl font-display font-black text-slate-900 mb-8">Frequently Asked Questions about ISRO Hub - Veerexa Space</h3>
+          <div class="faq-accordion space-y-4">
+            <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+              <details class="group">
+                <summary class="faq-question font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">What is the main objective of ISRO Hub - Veerexa Space? <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl">+</span></summary>
+                <div class="faq-answer mt-4 text-slate-600 leading-relaxed">The primary objective of ISRO Hub - Veerexa Space is to advance our understanding of space exploration and contribute to India's growing capabilities in aerospace technology.</div>
+              </details>
+            </div>
+            <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+              <details class="group">
+                <summary class="faq-question font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">How does ISRO Hub - Veerexa Space impact future space missions? <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl">+</span></summary>
+                <div class="faq-answer mt-4 text-slate-600 leading-relaxed">ISRO Hub - Veerexa Space sets a critical foundation for upcoming space missions by validating new technologies and operational procedures for ISRO and its partners.</div>
+              </details>
+            </div>
+            <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+              <details class="group">
+                <summary class="faq-question font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">What are the key technological advancements in ISRO Hub - Veerexa Space? <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl">+</span></summary>
+                <div class="faq-answer mt-4 text-slate-600 leading-relaxed">Key advancements include improved propulsion systems, autonomous navigation, and cost-effective engineering methodologies that define ISRO Hub - Veerexa Space.</div>
+              </details>
+            </div>
+            <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+              <details class="group">
+                <summary class="faq-question font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">Why is ISRO Hub - Veerexa Space important for India's space program? <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl">+</span></summary>
+                <div class="faq-answer mt-4 text-slate-600 leading-relaxed">ISRO Hub - Veerexa Space showcases India's self-reliance in space technology and strengthens its position in the global space economy.</div>
+              </details>
+            </div>
+          </div>
+        </section>
+</main>
+
+    <!-- BottomNavBar -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-surface/80 backdrop-blur-2xl border-t border-white/5 shadow-[0_-4px_24px_rgba(0,0,0,0.8)] md:hidden">
+        <a href="isro-space-missions-india.html" class="flex flex-col items-center justify-center text-secondary relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-secondary after:rounded-full transform scale-110 duration-200">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+            <span class="font-label-caps text-[10px] uppercase tracking-widest mt-1">ISRO</span>
+        </a>
+        <a href="index.html" class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity">
+            <span class="material-symbols-outlined">explore</span>
+            <span class="font-label-caps text-[10px] uppercase tracking-widest mt-1">Space</span>
+        </a>
+        <a href="../defense/index.html" class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity">
+            <span class="material-symbols-outlined">shield</span>
+            <span class="font-label-caps text-[10px] uppercase tracking-widest mt-1">Defense</span>
+        </a>
+    </nav>
+</body>
+</html>

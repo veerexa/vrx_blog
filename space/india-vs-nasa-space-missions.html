@@ -1,196 +1,475 @@
 <!DOCTYPE html>
 
-<html lang="en">
-<head>
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>India vs NASA Comparisons | Cost-Efficiency &amp; Space Strategy | Veerexa</title>
-<meta content="Technical comparison between ISRO (India) and NASA (USA). Analyze cost-per-kg, mission architecture, and engineering philosophies." name="description"/>
-<link href="https://blog.veerexa.com/space/india-vs-nasa-space-missions.html" rel="canonical"/>
-<meta content="article" property="og:type"/>
-<meta content="India vs NASA: Engineering &amp; Cost Comparison" property="og:title"/>
-<meta content="How ISRO achieves deep space success on a frugal budget compared to NASA standards." property="og:description"/>
-<meta content="https://blog.veerexa.com/space/india-vs-nasa-space-missions.html" property="og:url"/>
-<meta content="https://blog.veerexa.com/assets/images/og-space-comparison.jpg" property="og:image"/>
-<link href="../assets/css/style.css" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>VEEREXA - Rocket Explorer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+                tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "surface-container": "#f1f5f9",
+                        "inverse-surface": "#313033",
+                        "on-secondary-fixed-variant": "#004e60",
+                        "primary": "#0ea5e9",
+                        "surface-container-high": "#e2e8f0",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#001f2a",
+                        "outline": "#79747e",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#334155",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f4eff4",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#cac4d0",
+                        "surface-tint": "#0ea5e9",
+                        "secondary": "#7c3aed",
+                        "primary-container": "#cff4ff",
+                        "tertiary-fixed": "#ffd8e4",
+                        "on-error": "#ffffff",
+                        "background": "#f8fafc",
+                        "surface": "#ffffff",
+                        "surface-variant": "#e2e8f0",
+                        "primary-fixed": "#cff4ff",
+                        "secondary-container": "#e8def8",
+                        "surface-bright": "#f8fafc",
+                        "on-secondary-fixed": "#1d192b",
+                        "tertiary": "#7d5260",
+                        "on-tertiary-fixed-variant": "#31111d",
+                        "on-background": "#0f172a",
+                        "on-primary-container": "#001f2a",
+                        "primary-fixed-dim": "#82d3f9",
+                        "surface-container-low": "#f8fafc",
+                        "tertiary-container": "#ffd8e4",
+                        "secondary-fixed-dim": "#cbc2db",
+                        "on-primary-fixed-variant": "#004b68",
+                        "inverse-primary": "#82d3f9",
+                        "on-surface": "#1e293b",
+                        "on-tertiary-container": "#31111d",
+                        "on-secondary-container": "#1d192b",
+                        "surface-container-highest": "#cbd5e1",
+                        "surface-dim": "#dcd8dd",
+                        "on-error-container": "#410002",
+                        "secondary-fixed": "#e8def8",
+                        "tertiary-fixed-dim": "#efb8c8",
+                        "on-tertiary-fixed": "#31111d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "component-gap": "16px",
+                        "gutter": "24px",
+                        "container-padding-desktop": "40px",
+                        "container-padding-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Space Mono"],
+                        "display-lg": ["Inter"],
+                        "telemetry-md": ["Space Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "telemetry-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Scanlines */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 100;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            opacity: 0.2;
+        }
+        
+        /* Hide scrollbar for horizontal scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
 
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the importance of India vs NASA: Engineering Philosophies &amp; Cost Disparity?",
+      "name": "What is the main objective of India vs NASA Comparisons?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Understanding India vs NASA: Engineering Philosophies &amp; Cost Disparity is crucial for maximizing efficiency, staying compliant with modern standards, and ensuring long-term success in 2026."
+        "text": "The primary objective of India vs NASA Comparisons is to advance our understanding of space exploration and contribute to India's growing capabilities in aerospace technology."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does India vs NASA Comparisons impact future space missions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "India vs NASA Comparisons sets a critical foundation for upcoming space missions by validating new technologies and operational procedures for ISRO and its partners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the key technological advancements in India vs NASA Comparisons?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Key advancements include improved propulsion systems, autonomous navigation, and cost-effective engineering methodologies that define India vs NASA Comparisons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is India vs NASA Comparisons important for India's space program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "India vs NASA Comparisons showcases India's self-reliance in space technology and strengthens its position in the global space economy."
       }
     }
   ]
 }
   </script>
 </head>
-<body class="bg-[#f8fafc] text-[#334155] font-body">
-<header class="sticky top-0 z-[200] bg-white/70 backdrop-blur-md border-b border-slate-200/50">
-<div class="container h-20 flex items-center justify-between">
-<a class="flex items-center gap-3 decoration-none group" href="/index.html">
-<div class="w-10 h-10 bg-gradient-to-br from-[#7c3aed] to-[#0ea5e9] rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg">V</div>
-<span class="text-2xl font-display font-black text-slate-900 tracking-tight">Veer<span class="text-[#7c3aed]">exa</span></span>
-</a>
-<nav class="hidden md:flex items-center gap-2 nav-links">
-<a class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-[#7c3aed] hover:bg-[#7c3aed]/5 transition-all" href="/index.html">Home</a>
-<a class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-[#7c3aed] hover:bg-[#7c3aed]/5 transition-all" href="/education/index.html">Education</a>
-<a class="px-5 py-2 rounded-full text-sm font-semibold bg-slate-100 text-[#7c3aed]" href="/space/index.html">Space</a>
-<a class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-[#7c3aed] hover:bg-[#7c3aed]/5 transition-all" href="/tech/index.html">Tech Lab</a>
-<a class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-[#7c3aed] hover:bg-[#7c3aed]/5 transition-all" href="/inventory/index.html">Inventory</a>
-<a class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-[#7c3aed] hover:bg-[#7c3aed]/5 transition-all" href="/education/career-lab/index.html">Career Lab</a>
-        <a href="/launchpad/index.html" class="px-5 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-[#7c3aed] hover:bg-[#7c3aed]/5 transition-all">Launchpad</a>
-</nav>
-<div class="w-10"></div>
+<body class="bg-background text-on-background min-h-screen relative font-body-md text-body-md overflow-x-hidden">
+<!-- Background Layer (Z-Index 0/1) -->
+<div class="fixed inset-0 z-0 bg-background pointer-events-none">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&amp;w=2093&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-20 mix-blend-screen" data-alt="A deep space starfield with subtle nebulae. The image is mostly dark, vast blackness filled with scattered, tiny glowing white and blue stars. The overall mood is mysterious, expansive, and high-tech, serving as an immersive but unobtrusive backdrop for a futuristic digital interface. The lighting is very dim, highlighting the points of light in the distance."></div>
+<!-- Pulse effect for technical feel -->
+<div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-secondary-container/5 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-tertiary-container/5 rounded-full blur-[120px]"></div>
 </div>
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky z-50 border-b border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.5)] bg-surface/60 backdrop-blur-xl dark:bg-surface/60 flex justify-between items-center px-gutter py-unit h-16 w-full">
+<!-- Leading: Avatar -->
+<div class="flex items-center gap-unit scale-95 active:scale-90 transition-transform">
+<img alt="Indian Astronaut Profile" class="w-8 h-8 rounded-full border border-white/20 object-cover" data-alt="A close-up portrait of an astronaut wearing a modern, high-tech space suit helmet with the visor partially reflecting the surroundings. The lighting is dramatic and cinematic, with a soft blue tint suggesting a futuristic interior or cockpit. The overall mood is serious and professional, fitting a high-fidelity aerospace theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOCrRozsVHIiv4F-AsH2t7sm2X796NGYGrUGmzP3nh1fhzkSukZeM89zBZo-_NRCKMD5j_6IIzvl-9WibPeo-cult5fb37np8l_eDvKqMxzMNx1jp7vzQ7JcF_GBmOTaVWAvcgaI0YinTg93jxJIAGPzSp0_fJRsBBea2u9I0lDYYEp7SGkEr_I0QRJ6dSsF12epkAMd0WKKqx4UAdp0i-Fd2n0WK9XEqxf8LQRSNeDrgDwTOX_mWrLAPqFqcjYOQQIDECKZJWH9U"/>
+</div>
+<!-- Headline / Brand -->
+<div class="font-label-caps text-label-caps tracking-[0.2em] text-secondary dark:text-secondary-fixed-dim">
+            VEEREXA
+        </div>
+<!-- Trailing: Icon -->
+<button class="scale-95 active:scale-90 transition-transform text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-300">
+<span class="material-symbols-outlined">search</span>
+</button>
 </header>
-<!-- Breadcrumb -->
-<div class="container py-4">
-<nav class="flex items-center gap-2 text-xs text-slate-400 font-medium">
-<a class="hover:text-[#0ea5e9]" href="/index.html">Home</a>
-<span>/</span>
-<a class="hover:text-[#0ea5e9]" href="/space/index.html">Space Core</a>
-<span>/</span>
-<span class="text-slate-600">India vs NASA</span>
-</nav>
+<!-- Main Content Canvas (Z-Index 2) -->
+<main class="relative z-10 pb-32 pt-6 px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto flex flex-col gap-8">
+<!-- Page Header & Controls -->
+<section class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary dark:text-primary-fixed-dim mb-2">Rocket Explorer</h1>
+<p class="font-telemetry-md text-telemetry-md text-on-surface-variant max-w-xl">Browse ISRO's operational fleet. Access detailed telemetry, physical dimensions, and mission history for each launch vehicle.</p>
 </div>
-<main class="bg-slate-50">
-<div class="container mx-auto px-6 py-12">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-<div class="lg:col-span-8 order-2 lg:order-1">
-<article class="prose prose-slate max-w-none">
-<span class="inline-block px-3 py-1 rounded-full bg-orange-50 text-orange-600 text-[10px] font-bold uppercase mb-6">Technical Comparison</span>
-<h1 class="text-4xl md:text-5xl font-display font-black text-slate-900 mb-8 leading-tight">India vs NASA: Engineering Philosophies &amp; Cost Disparity</h1>
-<p class="text-xl text-slate-500 leading-relaxed mb-12">How did ISRO land on the South Pole for the cost of a Hollywood movie? The comparison between India's ISRO and the USA's NASA is often framed as a budget battle, but the real story lies in engineering trade-offs.</p>
-<div class="grid md:grid-cols-2 gap-8 mb-12">
-<div class="glass-card !bg-white">
-<h3 class="text-slate-900">ISRO: Frugal Excellence</h3>
-<p class="text-sm text-slate-500">Modular design, domestic manufacturing, and multi-mission component reuse. Mars Orbiter Mission cost only $74M.</p>
+<!-- Compare Toggle (Futuristic Switch) -->
+<div class="flex items-center gap-3 bg-surface-container-high/50 p-1.5 rounded-full border border-white/5 backdrop-blur-md">
+<span class="font-label-caps text-label-caps text-on-surface pl-3">COMPARE</span>
+<button class="relative inline-flex h-6 w-11 items-center rounded-full bg-surface-container-highest transition-colors focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-background">
+<span class="inline-block h-4 w-4 transform rounded-full bg-outline translate-x-1 transition-transform"></span>
+</button>
 </div>
-<div class="glass-card !bg-white">
-<h3 class="text-slate-900">NASA: Cutting-Edge Innovation</h3>
-<p class="text-sm text-slate-500">Pioneering R&amp;D, deep space infrastructure, and massive payload capabilities. Focuses on boundaries ISRO hasn't touched yet.</p>
+</section>
+<!-- Horizontal Scroll Area for Rocket Cards -->
+<section class="w-full relative">
+<!-- Fade masks for scroll edges -->
+<div class="absolute top-0 bottom-0 left-0 w-8 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none"></div>
+<div class="absolute top-0 bottom-0 right-0 w-8 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none"></div>
+<div class="flex overflow-x-auto gap-6 pb-8 pt-4 px-4 -mx-4 no-scrollbar snap-x snap-mandatory">
+<!-- Card 1: LVM3 (GSLV MkIII) -->
+<div class="snap-center shrink-0 w-[300px] md:w-[380px] bg-surface-container/40 backdrop-blur-[40px] border border-white/10 rounded-[24px] overflow-hidden flex flex-col group relative">
+<!-- Glow effect on hover -->
+<div class="absolute inset-0 bg-gradient-to-b from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<!-- Image Area -->
+<div class="h-64 relative overflow-hidden bg-surface-container-lowest">
+<img alt="LVM3 Rocket" class="w-full h-full object-cover object-bottom transition-transform duration-700 group-hover:scale-105" data-alt="A tall, powerful heavy-lift rocket on a launchpad, illuminated by intense floodlights against a dark, moody night sky. The rocket is primarily white with technical markings, and thick plumes of steam or liquid oxygen vapor are venting from its base. The scene feels highly industrial, precise, and monumental, matching a high-tech aerospace aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwsyE7cVnb6o4QozjhGNo68F-CG896M5t8CV8z5ClfRUWT5PqUWwjNjuSOwNCEaP8yN-kj5MGGLe6xKEm7pL4wtJusET49t5h5Ohucf37Fb8pQQu0vXHLPBoyqZD5Rz88lXksbjDf6JUCWYbu1MJEr76oU9K-u-XBq3_LWttN5b2j6yh-kTCIU3lmgJQnHp3mZYksri4V1F7htiP89JsdEyy6kna1JnMJ5qcsl9cd2NpIAEMWpxvwUYzfKU59GIPZ8yJwvHVzks-4"/>
+<!-- Technical Overlay -->
+<div class="absolute top-4 left-4 flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-white/70 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10">HEAVY LIFT</span>
+<span class="font-label-caps text-[10px] text-secondary bg-secondary/10 px-2 py-0.5 rounded backdrop-blur-sm border border-secondary/20 flex items-center gap-1"><div class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></div> ACTIVE</span>
 </div>
 </div>
-<h2>Key Benchmarks</h2>
-<div class="overflow-x-auto mb-12">
+<!-- Content Area -->
+<div class="p-6 flex flex-col gap-4 relative z-10 border-t border-white/5">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary leading-tight">LVM3</h3>
+<p class="font-telemetry-md text-telemetry-md text-on-surface-variant text-xs mt-1">Geosynchronous Satellite Launch Vehicle MkIII</p>
+</div>
+</div>
+<!-- Telemetry Data Grid -->
+<div class="grid grid-cols-2 gap-3 mt-2">
+<div class="bg-surface-container-lowest/80 border border-white/5 p-3 rounded-lg">
+<p class="font-label-caps text-[10px] text-outline mb-1">HEIGHT</p>
+<p class="font-telemetry-md text-telemetry-md text-inverse-surface">43.5 m</p>
+</div>
+<div class="bg-surface-container-lowest/80 border border-white/5 p-3 rounded-lg">
+<p class="font-label-caps text-[10px] text-outline mb-1">PAYLOAD (LEO)</p>
+<p class="font-telemetry-md text-telemetry-md text-inverse-surface">10,000 kg</p>
+</div>
+</div>
+<!-- Launch History Mini Graph -->
+<div class="mt-2">
+<p class="font-label-caps text-[10px] text-outline mb-2">LAUNCH SUCCESS RATE</p>
+<div class="flex items-center gap-2">
+<div class="h-1.5 flex-grow bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[100%] rounded-full shadow-[0_0_8px_rgba(166,230,255,0.5)]"></div>
+</div>
+<span class="font-telemetry-md text-telemetry-md text-secondary text-xs">100%</span>
+</div>
+<div class="flex gap-1 mt-2">
+<!-- Simulated dots for launches -->
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: PSLV -->
+<div class="snap-center shrink-0 w-[300px] md:w-[380px] bg-surface-container/40 backdrop-blur-[40px] border border-white/10 rounded-[24px] overflow-hidden flex flex-col group relative">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<!-- Image Area -->
+<div class="h-64 relative overflow-hidden bg-surface-container-lowest">
+<img alt="PSLV Rocket" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="A sleek, medium-lift rocket soaring through the upper atmosphere against a deep blue to black sky gradient. The rocket is trailing a bright, intense streak of fire and exhaust. The image has a cinematic, high-contrast look, emphasizing the speed and technological precision of spaceflight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChkE2VaZcBQ-GcvUvAnX-BnLGSAunBz6zdwpgnrBE5cwxKUQZSKKZgfZB7Mxf79yUE7XfaciTcLiq49jnEmnzRGIyn6LsjGEVBQ3ogwmCfp0-pApQe5LnD4xseR_NAInZI2fJAb7pbqhzee6VP80RK2YsBiK2jYQNbYuwcaGOoGeyg4qjYh7gZ86NLlysVKTwxjLPVk2lNWOLph_ePWXaoiKUAo1BW_3cg5ax2P3W_a4lJqwy7rgXWfacgUd1bGdQNKyEKNzM0tJ8"/>
+<!-- Technical Overlay -->
+<div class="absolute top-4 left-4 flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-white/70 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10">WORKHORSE</span>
+<span class="font-label-caps text-[10px] text-secondary bg-secondary/10 px-2 py-0.5 rounded backdrop-blur-sm border border-secondary/20 flex items-center gap-1"><div class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></div> ACTIVE</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-6 flex flex-col gap-4 relative z-10 border-t border-white/5">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary leading-tight">PSLV</h3>
+<p class="font-telemetry-md text-telemetry-md text-on-surface-variant text-xs mt-1">Polar Satellite Launch Vehicle</p>
+</div>
+</div>
+<!-- Telemetry Data Grid -->
+<div class="grid grid-cols-2 gap-3 mt-2">
+<div class="bg-surface-container-lowest/80 border border-white/5 p-3 rounded-lg">
+<p class="font-label-caps text-[10px] text-outline mb-1">HEIGHT</p>
+<p class="font-telemetry-md text-telemetry-md text-inverse-surface">44.0 m</p>
+</div>
+<div class="bg-surface-container-lowest/80 border border-white/5 p-3 rounded-lg">
+<p class="font-label-caps text-[10px] text-outline mb-1">PAYLOAD (SSO)</p>
+<p class="font-telemetry-md text-telemetry-md text-inverse-surface">1,750 kg</p>
+</div>
+</div>
+<!-- Launch History Mini Graph -->
+<div class="mt-2">
+<p class="font-label-caps text-[10px] text-outline mb-2">LAUNCH SUCCESS RATE</p>
+<div class="flex items-center gap-2">
+<div class="h-1.5 flex-grow bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[95%] rounded-full shadow-[0_0_8px_rgba(201,198,197,0.5)]"></div>
+</div>
+<span class="font-telemetry-md text-telemetry-md text-primary text-xs">95%</span>
+</div>
+<div class="flex gap-1 mt-2 flex-wrap h-4 overflow-hidden">
+<!-- Many dots for workhorse -->
+<div class="w-2 h-2 rounded-full bg-primary opacity-80"></div>
+<div class="w-2 h-2 rounded-full bg-primary opacity-80"></div>
+<div class="w-2 h-2 rounded-full bg-primary opacity-80"></div>
+<div class="w-2 h-2 rounded-full bg-primary opacity-80"></div>
+<div class="w-2 h-2 rounded-full bg-primary opacity-80"></div>
+<div class="w-2 h-2 rounded-full bg-primary opacity-80"></div>
+<div class="w-2 h-2 rounded-full bg-error opacity-80" title="Failure"></div>
+<div class="w-2 h-2 rounded-full bg-primary opacity-80"></div>
+<div class="w-2 h-2 rounded-full bg-primary opacity-80"></div>
+<div class="w-2 h-2 rounded-full bg-primary opacity-80"></div>
+<span class="font-label-caps text-[8px] text-outline ml-1">+40 MORE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: SSLV -->
+<div class="snap-center shrink-0 w-[300px] md:w-[380px] bg-surface-container/40 backdrop-blur-[40px] border border-white/10 rounded-[24px] overflow-hidden flex flex-col group relative">
+<div class="absolute inset-0 bg-gradient-to-b from-tertiary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<!-- Image Area -->
+<div class="h-64 relative overflow-hidden bg-surface-container-lowest">
+<img alt="SSLV Rocket Conceptual" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="A sleek, smaller modern rocket rendered in a 3D technical style, standing on a minimalist launch platform. The scene is brightly lit with cold, clinical lighting, highlighting the smooth white exterior and metallic details. It looks like a high-tech engineering schematic brought to life, focusing on efficiency and modern design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALtwop16F-wCsKRUxIj6iKXacBjKW_83yzuRjta9YHAIwKURMOj7hKGKymY5MjGQQqSYHlNPjYKfWoZuugGnGZOgRSxNzYC67WkWbvJmXQQ5RNAxkmNBJlZhKlGqSH9A0g_E0l94LVIsvrDnnZMOV0MdUsVastIhkk8LISp7u65OwNRk3ztw79heI86FgV9lutr1V8iD4e9LmpjZpSb9C2mYzNKmIM--gnssQbzPthPYV0lB-lgeEl6Hzdl8m1jD8r04XZ5KbMuVI"/>
+<!-- Technical Overlay -->
+<div class="absolute top-4 left-4 flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-white/70 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10">SMALL LIFT</span>
+<span class="font-label-caps text-[10px] text-secondary bg-secondary/10 px-2 py-0.5 rounded backdrop-blur-sm border border-secondary/20 flex items-center gap-1"><div class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></div> ACTIVE</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-6 flex flex-col gap-4 relative z-10 border-t border-white/5">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary leading-tight">SSLV</h3>
+<p class="font-telemetry-md text-telemetry-md text-on-surface-variant text-xs mt-1">Small Satellite Launch Vehicle</p>
+</div>
+</div>
+<!-- Telemetry Data Grid -->
+<div class="grid grid-cols-2 gap-3 mt-2">
+<div class="bg-surface-container-lowest/80 border border-white/5 p-3 rounded-lg">
+<p class="font-label-caps text-[10px] text-outline mb-1">HEIGHT</p>
+<p class="font-telemetry-md text-telemetry-md text-inverse-surface">34.0 m</p>
+</div>
+<div class="bg-surface-container-lowest/80 border border-white/5 p-3 rounded-lg">
+<p class="font-label-caps text-[10px] text-outline mb-1">PAYLOAD (LEO)</p>
+<p class="font-telemetry-md text-telemetry-md text-inverse-surface">500 kg</p>
+</div>
+</div>
+<!-- Launch History Mini Graph -->
+<div class="mt-2">
+<p class="font-label-caps text-[10px] text-outline mb-2">LAUNCH SUCCESS RATE</p>
+<div class="flex items-center gap-2">
+<div class="h-1.5 flex-grow bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[66%] rounded-full shadow-[0_0_8px_rgba(235,178,255,0.5)]"></div>
+</div>
+<span class="font-telemetry-md text-telemetry-md text-tertiary text-xs">66%</span>
+</div>
+<div class="flex gap-1 mt-2">
+<div class="w-2 h-2 rounded-full bg-error opacity-80" title="Failure"></div>
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><!-- Technical Comparison Table -->
+<section class="mt-8">
+<div class="flex items-center gap-3 mb-6">
+<div class="h-px flex-grow bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
+<h2 class="font-label-caps text-label-caps text-secondary tracking-[0.2em]">FLEET COMPARISON</h2>
+<div class="h-px flex-grow bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
+</div>
+<div class="overflow-hidden rounded-xl border border-secondary/20 bg-surface-container/20 backdrop-blur-md shadow-[0_0_20px_rgba(166,230,255,0.05)]">
+<div class="overflow-x-auto no-scrollbar">
 <table class="w-full text-left border-collapse">
-<thead class="border-b-2 border-slate-200">
-<tr>
-<th class="py-4 font-black">Metric</th>
-<th class="py-4 font-black text-[#7c3aed]">ISRO (India)</th>
-<th class="py-4 font-black text-[#0ea5e9]">NASA (USA)</th>
+<thead>
+<tr class="bg-secondary/5 border-b border-secondary/20">
+<th class="p-4 font-label-caps text-[10px] text-outline tracking-wider">ROCKET</th>
+<th class="p-4 font-label-caps text-[10px] text-outline tracking-wider text-right">HEIGHT (M)</th>
+<th class="p-4 font-label-caps text-[10px] text-outline tracking-wider text-right">STAGES</th>
+<th class="p-4 font-label-caps text-[10px] text-outline tracking-wider text-right">PAYLOAD LEO (KG)</th>
+<th class="p-4 font-label-caps text-[10px] text-outline tracking-wider text-right">SUCCESS %</th>
 </tr>
 </thead>
-<tbody class="divide-y divide-slate-100">
-<tr>
-<td class="py-4 text-xs font-bold uppercase text-slate-400">Avg. Launch Cost</td>
-<td class="py-4">$15M - $30M</td>
-<td class="py-4">$60M (Commercial) - $2B+ (SLS)</td>
+<tbody class="divide-y divide-white/5">
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="p-4 font-headline-lg-mobile text-sm text-primary">LVM3</td>
+<td class="p-4 font-telemetry-md text-sm text-inverse-surface text-right">43.5</td>
+<td class="p-4 font-telemetry-md text-sm text-inverse-surface text-right">3</td>
+<td class="p-4 font-telemetry-md text-sm text-inverse-surface text-right">10,000</td>
+<td class="p-4 font-telemetry-md text-sm text-secondary text-right">100</td>
 </tr>
-<tr>
-<td class="py-4 text-xs font-bold uppercase text-slate-400">Focus 2026</td>
-<td class="py-4">Human Flight (Gaganyaan)</td>
-<td class="py-4">Lunar Return (Artemis)</td>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="p-4 font-headline-lg-mobile text-sm text-primary">GSLV</td>
+<td class="p-4 font-telemetry-md text-sm text-inverse-surface text-right">49.1</td>
+<td class="p-4 font-telemetry-md text-sm text-inverse-surface text-right">3</td>
+<td class="p-4 font-telemetry-md text-sm text-inverse-surface text-right">5,000</td>
+<td class="p-4 font-telemetry-md text-sm text-primary text-right">92</td>
 </tr>
-<tr>
-<td class="py-4 text-xs font-bold uppercase text-slate-400">Payload Capacity</td>
-<td class="py-4">~4-8 Tons (LEO)</td>
-<td class="py-4">~25-95+ Tons (LEO)</td>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="p-4 font-headline-lg-mobile text-sm text-primary">PSLV</td>
+<td class="p-4 font-telemetry-md text-sm text-inverse-surface text-right">44.0</td>
+<td class="p-4 font-telemetry-md text-sm text-inverse-surface text-right">4</td>
+<td class="p-4 font-telemetry-md text-sm text-inverse-surface text-right">3,800</td>
+<td class="p-4 font-telemetry-md text-sm text-primary text-right">95</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2>The "Cost per KG" Reality</h2>
-<p>While NASA dominates in absolute power, ISRO's PSLV remains the "Workhorse of the World" for small satellites. India's ability to maximize launch efficiency by carrying multiple payloads has made it a preferred choice for global startups.</p>
-<div class="highlight-box bg-slate-50 mt-12">
-<h3>Collaborative Goals</h3>
-<p>It's not just a competition. The <strong>NISAR (NASA-ISRO Synthetic Aperture Radar)</strong> mission is a testament to how these two giants are merging US radar capabilities with Indian launch precision to map Earth's changing surface.</p>
+<div class="p-3 bg-secondary/5 border-t border-secondary/10 flex justify-between items-center">
+<span class="font-label-caps text-[8px] text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">info</span> SYSTEM STATUS: NOMINAL
+      </span>
+<span class="font-telemetry-md text-[8px] text-outline">V.2.4.0_FLEET_SYNC</span>
 </div>
+</div>
+</section>
 
-        <section class="mt-20 pt-10 border-t border-slate-200">
-          <h3 class="text-2xl font-display font-black text-slate-900 mb-8">FAQ</h3>
-          <div class="faq-item">
-            <details>
-              <summary class="faq-question">What is the importance of India vs NASA: Engineering Philosophies &amp; Cost Disparity? <span>+</span></summary>
-              <div class="faq-answer">Understanding India vs NASA: Engineering Philosophies &amp; Cost Disparity is crucial for maximizing efficiency, staying compliant with modern standards, and ensuring long-term success in 2026.</div>
-            </details>
+<section class="mt-20 pt-10 border-t border-slate-200">
+          <h3 class="text-2xl font-display font-black text-slate-900 mb-8">Frequently Asked Questions about India vs NASA Comparisons</h3>
+          <div class="faq-accordion space-y-4">
+            <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+              <details class="group">
+                <summary class="faq-question font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">What is the main objective of India vs NASA Comparisons? <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl">+</span></summary>
+                <div class="faq-answer mt-4 text-slate-600 leading-relaxed">The primary objective of India vs NASA Comparisons is to advance our understanding of space exploration and contribute to India's growing capabilities in aerospace technology.</div>
+              </details>
+            </div>
+            <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+              <details class="group">
+                <summary class="faq-question font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">How does India vs NASA Comparisons impact future space missions? <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl">+</span></summary>
+                <div class="faq-answer mt-4 text-slate-600 leading-relaxed">India vs NASA Comparisons sets a critical foundation for upcoming space missions by validating new technologies and operational procedures for ISRO and its partners.</div>
+              </details>
+            </div>
+            <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+              <details class="group">
+                <summary class="faq-question font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">What are the key technological advancements in India vs NASA Comparisons? <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl">+</span></summary>
+                <div class="faq-answer mt-4 text-slate-600 leading-relaxed">Key advancements include improved propulsion systems, autonomous navigation, and cost-effective engineering methodologies that define India vs NASA Comparisons.</div>
+              </details>
+            </div>
+            <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+              <details class="group">
+                <summary class="faq-question font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">Why is India vs NASA Comparisons important for India's space program? <span class="text-brand-violet group-open:rotate-45 transition-transform text-xl">+</span></summary>
+                <div class="faq-answer mt-4 text-slate-600 leading-relaxed">India vs NASA Comparisons showcases India's self-reliance in space technology and strengthens its position in the global space economy.</div>
+              </details>
+            </div>
           </div>
         </section>
-</article>
-</div>
-<!-- Sidebar -->
-<div class="lg:col-span-4 space-y-8 order-1 lg:order-2">
-<!-- Blog Index -->
-<div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
-<h3 class="text-xl font-display font-bold text-slate-900 mb-6 flex items-center gap-2">
-<span class="text-brand-violet">📚</span> Blog Index
-    </h3>
-<ul class="space-y-6">
-<li>
-<h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">Space Core</h4>
-<ul class="space-y-3">
-<li><a class="text-slate-600 hover:text-brand-violet text-sm font-medium transition-colors flex items-center gap-2" href="/space/moon-missions.html"><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> India's Lunar Missions</a></li>
-<li><a class="text-slate-600 hover:text-brand-violet text-sm font-medium transition-colors flex items-center gap-2" href="/space/mars-missions.html"><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> Mangalyaan &amp; Mars</a></li>
-<li><a class="text-slate-600 hover:text-brand-violet text-sm font-medium transition-colors flex items-center gap-2" href="/space/future-missions.html"><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> Future Space Targets</a></li>
-<li><a class="text-slate-600 hover:text-brand-violet text-sm font-medium transition-colors flex items-center gap-2" href="/space/isro-satellites-list.html"><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> ISRO Satellites List</a></li>
-<li><a class="text-slate-600 hover:text-brand-violet text-sm font-medium transition-colors flex items-center gap-2" href="/space/indian-private-space-companies.html"><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> Private Space Sector</a></li>
-</ul>
-</li>
-<li class="pt-2 border-t border-slate-100">
-<h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3 mt-4">Career Lab</h4>
-<ul class="space-y-3">
-<li><a class="text-slate-600 hover:text-brand-violet text-sm font-medium transition-colors flex items-center gap-2" href="/education/career-lab/science-research-isro-careers.html"><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> Join ISRO After 12th</a></li>
-<li><a class="text-slate-600 hover:text-brand-violet text-sm font-medium transition-colors flex items-center gap-2" href="/education/career-lab/medical-careers-guide-india.html"><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> Medical Careers Guide</a></li>
-<li><a class="text-slate-600 hover:text-brand-violet text-sm font-medium transition-colors flex items-center gap-2" href="/education/career-lab/engineering-tech-career-roadmap.html"><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> Tech Career Roadmap</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
 </main>
-<footer class="bg-slate-50 border-t border-slate-200 pt-16 pb-12 mt-20">
-<div class="container text-center">
-<p class="text-xs text-slate-400">© 2026 Veerexa Technologies · Space Core</p>
-</div>
-</footer>
-<!-- Mobile Bottom Nav -->
-<nav class="mobile-bottom-nav">
-    <div class="container">
-      <a href="/index.html" class="mobile-nav-item">
-        <span class="icon">🏠</span>
-        <span>Home</span>
-      </a>
-      <a href="/education/index.html" class="mobile-nav-item">
-        <span class="icon">🏫</span>
-        <span>Education</span>
-      </a>
-      <a href="/space/index.html" class="mobile-nav-item active">
-        <span class="icon">🚀</span>
-        <span>Space</span>
-      </a>
-      <a href="/tech/index.html" class="mobile-nav-item">
-        <span class="icon">💻</span>
-        <span>Tech Lab</span>
-      </a>
-      <a href="/inventory/index.html" class="mobile-nav-item">
-        <span class="icon">📦</span>
-        <span>Inventory</span>
-      </a>
-      <a href="/education/career-lab/index.html" class="mobile-nav-item">
-        <span class="icon">🎓</span>
-        <span>Career</span>
-      </a>
-    </div>
-  </nav>
-</body>
-</html>
+<!-- BottomNavBar (Visible on Mobile) -->
+    <!-- BottomNavBar -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-surface/80 backdrop-blur-2xl border-t border-white/5 shadow-[0_-4px_24px_rgba(0,0,0,0.8)] md:hidden">
+        <a href="isro-space-missions-india.html" class="flex flex-col items-center justify-center text-secondary relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-secondary after:rounded-full transform scale-110 duration-200">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+            <span class="font-label-caps text-[10px] uppercase tracking-widest mt-1">ISRO</span>
+        </a>
+        <a href="index.html" class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity">
+            <span class="material-symbols-outlined">explore</span>
+            <span class="font-label-caps text-[10px] uppercase tracking-widest mt-1">Space</span>
+        </a>
+        <a href="../defense/index.html" class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity">
+            <span class="material-symbols-outlined">shield</span>
+            <span class="font-label-caps text-[10px] uppercase tracking-widest mt-1">Defense</span>
+        </a>
+    </nav>
+</body></html>
